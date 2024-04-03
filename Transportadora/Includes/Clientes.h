@@ -12,13 +12,13 @@ private:
     string endereco;
 
 public:
-    void setNome(string nome_cliente);
+    void setNome(string);
     string getNome();
 
-    void setIdade(int idade_cliente);
+    void setIdade(int);
     int getIdade();
 
-    void setEndereco(string end);
+    void setEndereco(string);
     string getEndereco();
 };
 

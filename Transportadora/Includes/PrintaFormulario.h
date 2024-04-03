@@ -6,7 +6,7 @@
 #include "Clientes.h"
 #include "Pedidos.h"
 
-void PrintaFormulario (Veiculos x, Clientes y, Pedidos z);
+void PrintaFormulario (Veiculos, Clientes, Pedidos);
 
 #endif
 
