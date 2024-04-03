@@ -3,11 +3,11 @@
 
 using namespace std; 
 
-void Clientes::setNome(string nome_cliente) {
+void Clientes::setNome(char nome_cliente) {
         this->nome = nome_cliente;
     }
 
-string Clientes::getNome() {
+char Clientes::getNome() {
     return this->nome;
 }
 
