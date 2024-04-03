@@ -104,18 +104,18 @@ public:
 
 class Pedidos {
 private:
-    string numeroPedido;
+    int numeroPedido;
     string nomePedido;
     string coleta;
     string entrega;
     float peso;
 
 public:
-    void setNumeroPedido(string numero) {
+    void setNumeroPedido(int numero) {
         this->numeroPedido = numero;
     }
 
-    string getNumeroPedido() {
+    int getNumeroPedido() {
         return this->numeroPedido;
     }
 
@@ -156,7 +156,7 @@ void PrintaFormulario(Veiculos x, Clientes y, Pedidos z) {
     if (x.getTipo() != "Erro!") { 
 
         // printa as informações completas caso tenha inserido uma palavra valida
-        cout << "\t\t|PEDIDO " << z.getNumeroPedido() << "|"
+        cout << "\t\t|PEDIDO #" << z.getNumeroPedido() << "|"
 
              << "\n - Veiculo: " << x.getTipo()
              << "\n - Modelo: " << x.getModelo()
@@ -193,7 +193,7 @@ int main(void) {
     C1.setEndereco("Alegrete");
 
     Pedidos P1;
-    P1.setNumeroPedido("#546");
+    P1.setNumeroPedido(546);
     P1.setNomePedido("Teclado");
     P1.setColeta("Alegrete");
     P1.setEntrega("Alegrete");
