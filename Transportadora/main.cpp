@@ -14,7 +14,7 @@ int main(void) {
     V1.setLocalizacao("Garagem");
 
     Clientes C1;
-    C1.setNome('Bia');
+    C1.setNome("Bia");
     C1.setIdade(20);
     C1.setEndereco("Alegrete, RS");
 

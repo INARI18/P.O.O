@@ -7,13 +7,13 @@ using namespace std;
 
 class Clientes {
 private:
-    char nome;
+    string nome;
     int idade;
     string endereco;
 
 public:
-    void setNome(char);
-    char getNome();
+    int setNome(string);
+    string getNome();
 
     void setIdade(int);
     int getIdade();
