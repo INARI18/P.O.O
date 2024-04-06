@@ -6,56 +6,66 @@ using namespace std; // simplifica a sintaxe do código
 
 // Veiculos:: serve para indicar a classe a qual a funçao pertence
 
-void Veiculos::setTipo(string tipo) {
+int Veiculos::setTipo(string tipo) {
     for (auto &letra : tipo) { // referência e loop range-based
         letra = tolower(letra); // a referência recebe a versão minuscula e modifica o valor dentro da string
     }
 
     if (tipo == "carro" || tipo == "caminhonete" || tipo == "caminhao") {
         this->tipo = tipo;
-    } else {
-        this->tipo = "Erro!";
-    }
+        return 1;
+    } 
+
+    return 0;
 }
 
 string Veiculos::getTipo() {
-    return tipo;
+    if (setTipo(tipo)) {
+        return tipo; 
+    }     
+    
+    return "0"; 
 }
 
-void Veiculos::setCapacidade(int cap) {
+int Veiculos::setCapacidade(int cap) {
     capacidade = cap;
+    return 1;
 }
 
 int Veiculos::getCapacidade() {
     return capacidade;
 }
 
-void Veiculos::setAno(int ano) {
+int Veiculos::setAno(int ano) {
     this->ano = ano;
+    return 1;
 }
 
 int Veiculos::getAno() {
     return ano;
 }
 
-void Veiculos::setChassi(string chassi) {
+int Veiculos::setChassi(string chassi) {
     this->chassi = chassi;
+    return 1;
 }
 
 string Veiculos::getChassi(){
     return chassi;
 }
 
-void Veiculos::setModelo(string modelo) {
+int Veiculos::setModelo(string modelo) {
     this->modelo = modelo;
+    return 1;
 }
 
 string Veiculos::getModelo() {
     return modelo;
 }
 
-void Veiculos::setLocalizacao(string localizacao) {
+int Veiculos::setLocalizacao(string localizacao) {
     this->localizacao = localizacao;
+    return 1;
 }
 
 string Veiculos::getLocalizacao(){

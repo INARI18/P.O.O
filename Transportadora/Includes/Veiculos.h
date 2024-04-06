@@ -15,22 +15,22 @@ private:
     string localizacao;
 
 public:
-    void setTipo(string);
+    int setTipo(string tipo);
     string getTipo();
 
-    void setCapacidade(int);
+    int setCapacidade(int cap);
     int getCapacidade();
 
-    void setAno(int);
+    int setAno(int ano);
     int getAno();
 
-    void setChassi(string);
+    int setChassi(string chassi);
     string getChassi();
 
-    void setModelo(string);
+    int setModelo(string modelo); 
     string getModelo();
 
-    void setLocalizacao(string);
+    int setLocalizacao(string localizacao);
     string getLocalizacao();
 };
 

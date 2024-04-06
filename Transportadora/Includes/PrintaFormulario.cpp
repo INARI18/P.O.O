@@ -7,7 +7,7 @@
 using namespace std;
 
 void PrintaFormulario(Veiculos x, Clientes y, Pedidos z) {
-    if (x.getTipo() != "Erro!") { 
+    if (x.getTipo() != "0") { 
 
         // printa as informações completas caso tenha inserido uma palavra valida
         cout << "\t\t|PEDIDO #" << z.getNumeroPedido() << "|"

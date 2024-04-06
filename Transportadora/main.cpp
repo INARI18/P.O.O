@@ -5,6 +5,7 @@
 #include "Includes/PrintaFormulario.h"
 
 int main(void) {
+
     Veiculos V1;
     V1.setTipo("CARRO");
     V1.setCapacidade(432);
@@ -26,6 +27,10 @@ int main(void) {
     P1.setPeso(0.556);
 
     PrintaFormulario(V1, C1, P1);
+
+    /*while () {
+        a;
+    }*/
 
     return 0;
 }
