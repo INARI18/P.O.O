@@ -22,8 +22,13 @@ string Clientes::getNome() {
 }
 
 int Clientes::setIdade(int idade_cliente) {
+    if(idade > 0) {
     this->idade = idade_cliente;
-    return 1;
+    }
+
+    else {
+        return 0;
+    }
 }
 
 int Clientes::getIdade() {
