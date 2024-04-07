@@ -3,6 +3,15 @@
 
 using namespace std;
 
+Pedidos::Pedidos() {
+    this->numeroPedido = 0;
+    this->nomePedido = "";
+    this->coleta = "";
+    this->entrega = "";
+    this->peso = 0.0;
+}
+Pedidos::~Pedidos(){};
+
 void Pedidos::setNumeroPedido(int numero) {
     this->numeroPedido = numero;
 }

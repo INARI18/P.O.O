@@ -4,6 +4,14 @@
 
 using namespace std; 
 
+Clientes::Clientes(){
+    this->nome = "";
+    this->idade = 0;
+    this->endereco = "";
+}
+
+Clientes::~Clientes(){};
+
 int Clientes::setNome(string nome_cliente) {
     for(char aux : nome_cliente) {
             // verifica se o valor de aux é uma letra
@@ -21,18 +29,14 @@ string Clientes::getNome() {
     return this->nome; 
 }
 
-int Clientes::setIdade(int idade_cliente) {
-    if(idade > 0) {
+void Clientes::setIdade(int idade_cliente) {
     this->idade = idade_cliente;
-    }
-
-    else {
-        return 0;
-    }
 }
 
 int Clientes::getIdade() {
-    return this->idade;
+    if(this->idade > 0) {
+        return this->idade;
+    }
 }
 
 void Clientes::setEndereco(string end) {

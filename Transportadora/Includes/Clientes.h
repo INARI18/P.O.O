@@ -12,10 +12,13 @@ private:
     string endereco;
 
 public:
+    Clientes();
+    ~Clientes();
+    
     int setNome(string nome_cliente);
     string getNome();
 
-    int setIdade(int idade_cliente);
+    void setIdade(int idade_cliente);
     int getIdade();
 
     void setEndereco(string end);

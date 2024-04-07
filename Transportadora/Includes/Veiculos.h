@@ -15,6 +15,9 @@ private:
     string localizacao;
 
 public:
+    Veiculos();
+    ~Veiculos();
+
     int setTipo(string tipo);
     string getTipo();
 

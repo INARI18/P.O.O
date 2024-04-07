@@ -1,30 +1,38 @@
-#include "Veiculos.h"
 #include <iostream>
 #include <cctype> // tolower
+#include "Veiculos.h"
 
 using namespace std; // simplifica a sintaxe do código
 
 // Veiculos:: serve para indicar a classe a qual a funçao pertence
+Veiculos::Veiculos(){
+    this->tipo = "";
+    this->capacidade = 0;
+    this->ano = 0;
+    this->chassi = "";
+    this->modelo = "";
+    this->localizacao = "";
+}
 
-int Veiculos::setTipo(string tipo) {
-    for (auto &letra : tipo) { // referência e loop range-based
+Veiculos::~Veiculos(){};
+
+int Veiculos::setTipo(string Vtipo) {
+    for (auto &letra : Vtipo) { // referência e loop range-based
         letra = tolower(letra); // a referência recebe a versão minuscula e modifica o valor dentro da string
     }
 
-    if (tipo == "carro" || tipo == "caminhonete" || tipo == "caminhao") {
-        this->tipo = tipo;
-        return 1;
+    if (Vtipo != "carro" || Vtipo != "caminhonete" || Vtipo != "caminhao") {
+        this->tipo = Vtipo;
     } 
 
-    return 0;
+    else return 0;
 }
 
 string Veiculos::getTipo() {
-    if (setTipo(tipo)) {
-        return tipo; 
+    if (this->tipo.empty()) {
+        return ""; 
     }     
-    
-    return "0"; 
+    return tipo; 
 }
 
 int Veiculos::setCapacidade(int cap) {

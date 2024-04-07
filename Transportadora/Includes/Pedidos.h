@@ -14,24 +14,22 @@ private:
     float peso;
 
 public:
+    Pedidos();
+    ~Pedidos();
+    
     void setNumeroPedido(int numero);
-
     int getNumeroPedido();
 
     void setNomePedido(string produto);
-
     string getNomePedido();
 
     void setColeta(string local_coleta);
-
     string getColeta(); 
 
-    void setEntrega(string local_coleta);
-
+    void setEntrega(string local_entrega);
     string getEntrega();
 
-    void setPeso(float local_coleta);
-
+    void setPeso(float peso_carga);
     float getPeso();
 };
 

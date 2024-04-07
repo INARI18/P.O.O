@@ -28,9 +28,6 @@ int main(void) {
 
     PrintaFormulario(V1, C1, P1);
 
-    /*while () {
-        a;
-    }*/
 
     return 0;
 }
