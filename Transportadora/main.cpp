@@ -30,6 +30,5 @@ int main(void) {
 
     PrintaFormulario(V1, C1, P1);
 
-
     return 0;
 }
