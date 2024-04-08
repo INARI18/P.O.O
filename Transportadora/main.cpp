@@ -4,6 +4,8 @@
 #include "Includes/Pedidos.h"
 #include "Includes/PrintaFormulario.h"
 
+using namespace std;
+
 int main(void) {
 
     Veiculos V1;

@@ -5,16 +5,17 @@
 using namespace std; // simplifica a sintaxe do código
 
 // Veiculos:: serve para indicar a classe a qual a funçao pertence
+
 Veiculos::Veiculos(){
     this->tipo = "";
     this->capacidade = 0;
     this->ano = 0;
     this->chassi = "";
     this->modelo = "";
-    this->localizacao = "";
+    this->localizacao = ""; 
 }
 
-Veiculos::~Veiculos(){};
+Veiculos::~Veiculos(){}
 
 int Veiculos::setTipo(string Vtipo) {
     for (auto &letra : Vtipo) { // referência e loop range-based
@@ -23,9 +24,10 @@ int Veiculos::setTipo(string Vtipo) {
 
     if (Vtipo != "carro" || Vtipo != "caminhonete" || Vtipo != "caminhao") {
         this->tipo = Vtipo;
+        return 1;
     } 
 
-    else return 0;
+    return 0;
 }
 
 string Veiculos::getTipo() {

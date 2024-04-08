@@ -10,7 +10,7 @@ Clientes::Clientes(){
     this->endereco = "";
 }
 
-Clientes::~Clientes(){};
+Clientes::~Clientes(){}
 
 int Clientes::setNome(string nome_cliente) {
     for(char aux : nome_cliente) {
@@ -20,6 +20,7 @@ int Clientes::setNome(string nome_cliente) {
             }
         }
     this->nome = nome_cliente;
+    return 1;
 }
 
 string Clientes::getNome() {
@@ -36,7 +37,9 @@ void Clientes::setIdade(int idade_cliente) {
 int Clientes::getIdade() {
     if(this->idade > 0) {
         return this->idade;
-    }
+   }
+
+   return 0;
 }
 
 void Clientes::setEndereco(string end) {

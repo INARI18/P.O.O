@@ -10,7 +10,7 @@ Pedidos::Pedidos() {
     this->entrega = "";
     this->peso = 0.0;
 }
-Pedidos::~Pedidos(){};
+Pedidos::~Pedidos(){}
 
 void Pedidos::setNumeroPedido(int numero) {
     this->numeroPedido = numero;

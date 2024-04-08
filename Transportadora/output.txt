@@ -1,0 +1,15 @@
+		|PEDIDO #546|
+ - Veiculo: carro
+ - Modelo: Nissan Kicks
+ - Capacidade: 432L
+ - Ano: 2024
+ - Chassi: 9BD111060T5002156
+ - Localizacao: Garagem
+
+ - Nome: Bia
+ - Idade: 20
+ - Endereco: Alegrete, RS
+
+ - Local de Coleta: Sao Paulo, SP
+ - Local de Entrega: Alegrete, RS
+ - Peso: 0.556kg
