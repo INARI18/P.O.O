@@ -7,7 +7,7 @@ using namespace std; // simplifica a sintaxe do código
 
 class Veiculos {
 private:
-    string tipo;
+    //string tipo;
     int capacidade;
     int ano;
     string chassi;
@@ -16,11 +16,11 @@ private:
 
 public:
     Veiculos();
-    Veiculos(string Vtipo, int cap, int ano, string chassi, string modelo, string localizacao); // construtor
+    Veiculos(int cap, int ano, string chassi, string modelo, string localizacao); // construtor
     ~Veiculos();
 
-    int setTipo(string tipo);
-    string getTipo();
+    //int setTipo(string tipo);
+    //string getTipo();
 
     int setCapacidade(int cap);
     int getCapacidade();

@@ -5,8 +5,9 @@
 #include "Veiculos.h"
 #include "Clientes.h"
 #include "Pedidos.h"
+#include "Caminhao.h"
 
-void PrintaFormulario (Veiculos *pVeiculo, Clientes *pCliente, Pedidos *pPedido);
+void PrintaFormulario (Veiculos *pCaminhao, Clientes *pCliente, Pedidos *pPedido);
 
 #endif
 
