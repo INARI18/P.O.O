@@ -15,6 +15,7 @@ private:
 
 public:
     Pedidos();
+    Pedidos(int numero, string produto, string local_coleta, string local_entrega, float peso_carga);
     ~Pedidos();
     
     void setNumeroPedido(int numero);

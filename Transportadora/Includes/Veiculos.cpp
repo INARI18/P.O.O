@@ -5,14 +5,21 @@
 using namespace std; // simplifica a sintaxe do código
 
 // Veiculos:: serve para indicar a classe a qual a funçao pertence
-
-Veiculos::Veiculos(){
+Veiculos::Veiculos() {
     this->tipo = "";
     this->capacidade = 0;
-    this->ano = 0;
+    this->ano = 2024;
     this->chassi = "";
     this->modelo = "";
-    this->localizacao = ""; 
+    this->localizacao = "";
+}
+Veiculos::Veiculos(string Vtipo, int cap, int ano, string chassi, string modelo, string localizacao){
+    setTipo(Vtipo);
+    setCapacidade(cap);
+    setAno(ano);
+    setChassi(chassi);
+    setModelo(modelo);
+    setLocalizacao(localizacao); 
 }
 
 Veiculos::~Veiculos(){}
@@ -22,7 +29,7 @@ int Veiculos::setTipo(string Vtipo) {
         letra = tolower(letra); // a referência recebe a versão minuscula e modifica o valor dentro da string
     }
 
-    if (Vtipo != "carro" || Vtipo != "caminhonete" || Vtipo != "caminhao") {
+    if (Vtipo == "carro" || Vtipo == "caminhonete" || Vtipo == "caminhao") {
         this->tipo = Vtipo;
         return 1;
     } 

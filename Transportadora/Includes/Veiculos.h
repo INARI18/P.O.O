@@ -15,8 +15,9 @@ private:
     string localizacao;
 
 public:
-    Veiculos(); // construtor
-    ~Veiculos(); // destrutor
+    Veiculos();
+    Veiculos(string Vtipo, int cap, int ano, string chassi, string modelo, string localizacao); // construtor
+    ~Veiculos();
 
     int setTipo(string tipo);
     string getTipo();

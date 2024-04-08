@@ -10,6 +10,12 @@ Clientes::Clientes(){
     this->endereco = "";
 }
 
+Clientes::Clientes(string nome_cliente, int idade_cliente, string end){
+    setNome(nome_cliente);
+    setIdade(idade_cliente);
+    setEndereco(end);
+}
+
 Clientes::~Clientes(){}
 
 int Clientes::setNome(string nome_cliente) {

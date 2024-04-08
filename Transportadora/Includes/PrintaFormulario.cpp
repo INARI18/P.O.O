@@ -6,25 +6,25 @@
 
 using namespace std;
 
-void PrintaFormulario(Veiculos x, Clientes y, Pedidos z) {
-    if(!(x.getTipo().empty())) { 
+void PrintaFormulario(Veiculos *pVeiculo, Clientes *pCliente, Pedidos *pPedido) {
+    if(!(pVeiculo->getTipo().empty())) { 
 
-        // printa as informações completas caso tipo não esteja vazio
-        cout << "\t\t|PEDIDO #" << z.getNumeroPedido() << "|"
+        // printa as informações completas caso tipo não esteja vapPedidoio
+        cout << "\t\t|PEDIDO #" << pPedido->getNumeroPedido() << "|"
 
-        << "\n - Veiculo: " << x.getTipo()
-        << "\n - Modelo: " << x.getModelo()
-        << "\n - Capacidade: " << x.getCapacidade() << "L"
-        << "\n - Ano: " << x.getAno()
-        << "\n - Chassi: " << x.getChassi()
-        << "\n - Localizacao: " << x.getLocalizacao()
+        << "\n - Veiculo: " << pVeiculo->getTipo()
+        << "\n - Modelo: " << pVeiculo->getModelo()
+        << "\n - Capacidade: " << pVeiculo->getCapacidade() << "L"
+        << "\n - Ano: " << pVeiculo->getAno()
+        << "\n - Chassi: " << pVeiculo->getChassi()
+        << "\n - LocalipPedidoacao: " << pVeiculo->getLocalizacao()
 
-        << "\n\n - Nome: " << y.getNome()
-        << "\n - Idade: " << y.getIdade()
-        << "\n - Endereco: " << y.getEndereco()
+        << "\n\n - Nome: " << pCliente->getNome()
+        << "\n - Idade: " << pCliente->getIdade()
+        << "\n - Endereco: " << pCliente->getEndereco()
 
-        << "\n\n - Local de Coleta: " << z.getColeta()
-        << "\n - Local de Entrega: " << z.getEntrega()
-        << "\n - Peso: " << z.getPeso() << "kg" << endl;
+        << "\n\n - Local de Coleta: " << pPedido->getColeta()
+        << "\n - Local de Entrega: " << pPedido->getEntrega()
+        << "\n - Peso: " << pPedido->getPeso() << "kg" << endl;
     }
 }

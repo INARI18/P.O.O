@@ -10,6 +10,15 @@ Pedidos::Pedidos() {
     this->entrega = "";
     this->peso = 0.0;
 }
+
+Pedidos::Pedidos(int numero, string produto, string local_coleta, string local_entrega, float peso_carga) {
+    setNumeroPedido(numero);
+    setNomePedido(produto);
+    setColeta(local_coleta);
+    setEntrega(local_entrega);
+    setPeso(peso_carga);
+}
+
 Pedidos::~Pedidos(){}
 
 void Pedidos::setNumeroPedido(int numero) {

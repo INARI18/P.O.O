@@ -13,6 +13,7 @@ private:
 
 public:
     Clientes();
+    Clientes(string nome_cliente, int idade_cliente, string end);
     ~Clientes();
     
     int setNome(string nome_cliente);
