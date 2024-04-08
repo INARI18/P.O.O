@@ -7,7 +7,7 @@
 using namespace std;
 
 void PrintaFormulario(Veiculos *pVeiculo, Clientes *pCliente, Pedidos *pPedido) {
-    if(!(pVeiculo->getTipo().empty())) { 
+    //if(!(pVeiculo->getTipo().empty())) { 
 
         // printa as informações completas caso tipo não esteja vapPedidoio
         cout << "\t\t|PEDIDO #" << pPedido->getNumeroPedido() << "|"
@@ -26,5 +26,5 @@ void PrintaFormulario(Veiculos *pVeiculo, Clientes *pCliente, Pedidos *pPedido) 
         << "\n\n - Local de Coleta: " << pPedido->getColeta()
         << "\n - Local de Entrega: " << pPedido->getEntrega()
         << "\n - Peso: " << pPedido->getPeso() << "kg" << endl;
-    }
+    //}
 }

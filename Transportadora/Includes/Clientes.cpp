@@ -44,7 +44,6 @@ int Clientes::getIdade() {
     if(this->idade > 0) {
         return this->idade;
    }
-
    return 0;
 }
 

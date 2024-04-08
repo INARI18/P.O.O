@@ -8,7 +8,7 @@ using namespace std; // simplifica a sintaxe do código
 Veiculos::Veiculos() {
     this->tipo = "";
     this->capacidade = 0;
-    this->ano = 2024;
+    this->ano = 0;
     this->chassi = "";
     this->modelo = "";
     this->localizacao = "";
