@@ -15,7 +15,7 @@ public:
     Caminhonete(int cap, int ano, string Vchassi, string modelo, string localizacao, string cacamba);
     ~Caminhonete();
 
-    int setCCacamba(string cacamba);
+    int setCacamba(string cacamba);
     string getCacamba();
 };
 

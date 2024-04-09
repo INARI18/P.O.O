@@ -7,7 +7,6 @@ using namespace std;
 
 Caminhonete::Caminhonete(){
     this->Cacamba = "";
-
 }
 
 Caminhonete::Caminhonete(int cap, int ano, string Vchassi, string modelo, 
@@ -19,6 +18,7 @@ Caminhonete::~Caminhonete(){};
 
 int Caminhonete::setCacamba(string cacamba) {
     this->Cacamba = cacamba;
+    return 1;
 }
 
 string Caminhonete::getCacamba() {
