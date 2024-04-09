@@ -17,7 +17,7 @@ private:
 public:
     Veiculos();
     Veiculos(int cap, int ano, string Vchassi, string modelo, string localizacao); // construtor
-    ~Veiculos();
+    virtual ~Veiculos();
 
     int setCapacidade(int cap);
     int getCapacidade();
