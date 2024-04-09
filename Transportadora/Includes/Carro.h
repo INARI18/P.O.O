@@ -9,12 +9,17 @@ using namespace std;
 
 class Carro : public Veiculos {
 private:
-    int n_portas;
+    int portas;
     string Cambio;
 public:
     Carro();
-    Carro(string Vtipo, int cap, int ano, string chassi, string modelo, string localizacao, int portas, string cambio);
+    Carro(string Vtipo, int cap, int ano, string Vchassi, string modelo, string localizacao, int n_portas, string cambio);
     ~Carro();
-};
 
+    int setPortas(int n_portas);
+    int getPortas();
+
+    int setCambio(string cambio);
+    string getCambio();
+};
 #endif
