@@ -10,29 +10,30 @@
 
 using namespace std;
 
-void PrintaFormulario(Veiculos *objeto, Clientes* pCliente, Pedidos* pPedido) {
+void PrintaFormulario(Veiculos *pVeiculo, Clientes* pCliente, Pedidos* pPedido) {
     cout << "\t\t|PEDIDO #" << pPedido->getNumeroPedido() << "|"
 
-    << "\n - Modelo: " << objeto->getModelo()
-    << "\n - Capacidade de carga: " << objeto->getCapacidade() << "Kg"
-    << "\n - Ano: " << objeto->getAno()
-    << "\n - Chassi: " << objeto->getChassi()
-    << "\n - Localizacao: " << objeto->getLocalizacao();
+    << "\n - Modelo: " << pVeiculo->getModelo()
+    << "\n - Capacidade de carga: " << pVeiculo->getCapacidade() << "Kg"
+    << "\n - Ano: " << pVeiculo->getAno()
+    << "\n - Chassi: " << pVeiculo->getChassi()
+    << "\n - Localizacao: " << pVeiculo->getLocalizacao();
 
     // Downcast carro
-    /*Carro *carro = dynamic_cast<Carro*>(objeto);
+    Carro *carro = dynamic_cast<Carro*>(pVeiculo);
     if (carro) {
-        a;
+        cout << "\n - Numero de Portas: " << carro->getPortas()
+        << "\n - Cambio: " << carro->getCambio();
     }
     
     // Downcast caminhonete
-    Caminhonete *caminhonete = dynamic_cast<Caminhonete*>(objeto);
+    Caminhonete *caminhonete = dynamic_cast<Caminhonete*>(pVeiculo);
     if (caminhonete) {
-        a;
-    }*/
+        cout << "\n - Tipo de Cacamba: " << caminhonete->getCacamba();
+    }
     
     // Downcast caminhao
-    Caminhao *caminhao = dynamic_cast<Caminhao*>(objeto);
+    Caminhao *caminhao = dynamic_cast<Caminhao*>(pVeiculo);
     if (caminhao) {
         cout << "\n - Altura: " << fixed << setprecision(2) << caminhao->getAltura() << "m"
         << "\n - Largura: " << fixed << setprecision(2) << caminhao->getLargura() << "m"

@@ -10,7 +10,7 @@ Carro::Carro() {
     this->Cambio = "";
 }
 
-Carro::Carro(string Vtipo, int cap, int ano, string Vchassi, string modelo, string localizacao, 
+Carro::Carro(int cap, int ano, string Vchassi, string modelo, string localizacao, 
 int n_portas, string cambio) :Veiculos (cap, ano, Vchassi, modelo, localizacao){
     setPortas(n_portas);
 }

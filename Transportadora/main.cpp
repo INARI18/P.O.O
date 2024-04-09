@@ -21,14 +21,15 @@ int main(void) {
 
     switch (tipo) {
         case TipoVeiculo::Carro:
-            V1 = new Carro(); 
+            V1 = new Carro(432, 2024, "JN1ABCDEFGH1234567", "Nissan Kicks", 
+    "Garagem", 4, "automatico"); 
             break;
         case TipoVeiculo::Caminhao:
             V1 = new Caminhao(16000, 2022, "9BD111060T5002156", "Bitruck", 
-    "Garagem", 2.60, 2.44, 8.00, "Madeira");
+    "Garagem", 2.60, 2.44, 8.00, "Madeira"); //tirar carga do caminhao
             break;
         case TipoVeiculo::Caminhonete:
-            V1 = new Caminhonete(); 
+            V1 = new Caminhonete(1200, 2004, "1GCHK24U64E121748", "Ford F-150", "Garagem", "Aberta"); 
             break;
         default:
             cout << "Tipo de veiculo nao reconhecido." << endl;
@@ -73,6 +74,7 @@ int main(void) {
     Pedidos *P2 = new Pedidos("Geladeira", "Rio de Janeiro, RJ", "Nao Me Toque, RS", 54);
 
     PrintaFormulario(V2, C2, P2);
+
     delete V2;
     delete C2;
     delete P2;

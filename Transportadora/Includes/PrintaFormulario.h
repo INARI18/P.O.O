@@ -7,7 +7,7 @@
 #include "Pedidos.h"
 #include "Caminhao.h"
 
-void PrintaFormulario(Veiculos *objeto, Clientes *pCliente, Pedidos *pPedido);
+void PrintaFormulario(Veiculos *pVeiculo, Clientes *pCliente, Pedidos *pPedido);
 
 #endif
 

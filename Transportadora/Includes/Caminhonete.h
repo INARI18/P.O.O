@@ -9,11 +9,14 @@ using namespace std;
 
 class Caminhonete : public Veiculos {
 private:
-    string cacamba;
+    string Cacamba; //caçamba
 public:
     Caminhonete();
-    Caminhonete(string Vtipo, int cap, int ano, string chassi, string modelo, string localizacao);
+    Caminhonete(int cap, int ano, string Vchassi, string modelo, string localizacao, string cacamba);
     ~Caminhonete();
+
+    int setCCacamba(string cacamba);
+    string getCacamba();
 };
 
 #endif
