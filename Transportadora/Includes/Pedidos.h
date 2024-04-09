@@ -2,12 +2,13 @@
 #define PEDIDOS_H
 
 #include <iostream>
+#include <string>
 
 using namespace std;
 
 class Pedidos {
 private:
-    int numeroPedido;
+    static int numeroPedido; // membro estático
     string nomePedido;
     string coleta;
     string entrega;
@@ -15,11 +16,11 @@ private:
 
 public:
     Pedidos();
-    Pedidos(int numero, string produto, string local_coleta, string local_entrega, float peso_carga);
+    Pedidos(string produto, string local_coleta, string local_entrega, float peso_carga);
     ~Pedidos();
     
-    void setNumeroPedido(int numero);
-    int getNumeroPedido();
+    static void setNumeroPedido();
+    static int getNumeroPedido();
 
     void setNomePedido(string produto);
     string getNomePedido();

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include <ctype.h>
 #include "Clientes.h"
 
@@ -43,7 +44,7 @@ void Clientes::setIdade(int idade_cliente) {
 int Clientes::getIdade() {
     if(this->idade > 0) {
         return this->idade;
-   }
+    }
    return 0;
 }
 

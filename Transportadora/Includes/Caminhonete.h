@@ -2,6 +2,7 @@
 #define CAMINHONETE_H
 
 #include <iostream>
+#include <string>
 #include "Veiculos.h"
 
 using namespace std;

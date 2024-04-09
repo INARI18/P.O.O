@@ -2,12 +2,12 @@
 #define VEICULOS_H
 
 #include <iostream>
+#include <string>
 
 using namespace std; // simplifica a sintaxe do código
 
 class Veiculos {
 private:
-    //string tipo;
     int capacidade;
     int ano;
     string chassi;
@@ -16,11 +16,8 @@ private:
 
 public:
     Veiculos();
-    Veiculos(int cap, int ano, string chassi, string modelo, string localizacao); // construtor
+    Veiculos(int cap, int ano, string Vchassi, string modelo, string localizacao); // construtor
     ~Veiculos();
-
-    //int setTipo(string tipo);
-    //string getTipo();
 
     int setCapacidade(int cap);
     int getCapacidade();
@@ -28,7 +25,7 @@ public:
     int setAno(int ano);
     int getAno();
 
-    int setChassi(string chassi);
+    int setChassi(string Vchassi);
     string getChassi();
 
     int setModelo(string modelo); 
