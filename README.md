@@ -1,4 +1,4 @@
--------------------------------------------------------------------- TAREFA #1 --------------------------------------------------------------------
+------------------------------------------------------ TAREFA #1 ------------------------------------------------------
 
 Considere que você está prestes a implementar um sistema para uma transportadora de
 cargas do Baita Chão. Nessa primeira etapa, a transportadora apenas mencionou algumas
@@ -16,7 +16,7 @@ itens (1,2,3). Cada sistema pode possuir suas próprias variações e peculiarid
 implementação das classes, vocês devem implementar os métodos de acesso aos atributos
 (métodos get e set), quando necessários. 
 
--------------------------------------------------------------------- TAREFA #2 --------------------------------------------------------------------
+------------------------------------------------------ TAREFA #2 ------------------------------------------------------
 
 Nesta segunda etapa, vocês devem primeiramente refatorar o código existente da seguinte
 forma:
