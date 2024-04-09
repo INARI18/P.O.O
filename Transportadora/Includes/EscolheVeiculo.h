@@ -6,7 +6,7 @@
 
 using namespace std;
 
-enum class TipoVeiculo {
+enum class TipoVeiculo { 
     Carro,
     Caminhao,
     Caminhonete,

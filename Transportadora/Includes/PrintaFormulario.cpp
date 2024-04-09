@@ -10,7 +10,7 @@
 
 using namespace std;
 
-void PrintaFormulario(Veiculos *pVeiculo, Clientes* pCliente, Pedidos* pPedido) {
+void PrintaFormulario(Veiculos *pVeiculo, Clientes *pCliente, Pedidos *pPedido) {
     cout << "\t\t|PEDIDO #" << pPedido->getNumeroPedido() << "|"
 
     << "\n - Modelo: " << pVeiculo->getModelo()
