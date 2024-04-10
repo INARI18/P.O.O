@@ -11,13 +11,17 @@ Veiculos::Veiculos() {
     this->chassi = "";
     this->modelo = "";
     this->localizacao = "";
+    this->disponibilidade = 1;
+    this->itens = 0;
 }
-Veiculos::Veiculos(int cap, int ano, string Vchassi, string modelo, string localizacao){
+
+Veiculos::Veiculos(int cap, int ano, string Vchassi, string modelo, string localizacao, int item){
     setCapacidade(cap);
     setAno(ano);
     setChassi(Vchassi);
     setModelo(modelo);
     setLocalizacao(localizacao); 
+    setDisponibilidade();
 }
 
 Veiculos::~Veiculos(){}
@@ -68,4 +72,28 @@ int Veiculos::setLocalizacao(string localizacao) {
 
 string Veiculos::getLocalizacao(){
     return this->localizacao;
+}
+
+int Veiculos::setDisponibilidade(){
+    if(){
+        this->disponibilidade = 1;
+        return 1;
+    }
+
+    this->disponibilidade = 0;
+    return 0;
+}
+
+int Veiculos::getDisponibilidade(){
+    return this->disponibilidade;
+
+}
+
+int Veiculos::setItens() {
+    this->itens;
+    return 1;
+}
+
+int Veiculos::getItens() {
+    return this->itens;
 }

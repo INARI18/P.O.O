@@ -1,12 +1,6 @@
 #include <iostream>
 #include <iomanip> // setprecision 
-#include "PrintaFormulario.h"
-#include "Veiculos.h"
-#include "Clientes.h"
-#include "Pedidos.h"
-#include "Carro.h"
-#include "Caminhonete.h"
-#include "Caminhao.h"
+#include "PrintaFormulario.h" 
 
 using namespace std;
 

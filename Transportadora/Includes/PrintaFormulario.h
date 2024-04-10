@@ -2,9 +2,11 @@
 #define PRINTA_FORMULARIO_H
 
 #include <iostream>
-#include "EscolheVeiculo.h"
+#include "Veiculos.h"
 #include "Clientes.h"
 #include "Pedidos.h"
+#include "Carro.h"
+#include "Caminhonete.h"
 #include "Caminhao.h"
 
 void PrintaFormulario(Veiculos *pVeiculo, Clientes *pCliente, Pedidos *pPedido);

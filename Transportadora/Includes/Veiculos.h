@@ -13,10 +13,12 @@ private:
     string chassi;
     string modelo;
     string localizacao;
+    int disponibilidade;
+    int itens;
 
 public:
     Veiculos();
-    Veiculos(int cap, int ano, string Vchassi, string modelo, string localizacao); // construtor
+    Veiculos(int cap, int ano, string Vchassi, string modelo, string localizacao, int item); // construtor
     virtual ~Veiculos();
 
     int setCapacidade(int cap);
@@ -33,6 +35,12 @@ public:
 
     int setLocalizacao(string localizacao);
     string getLocalizacao();
+
+    int setDisponibilidade();
+    int getDisponibilidade();
+
+    virtual int setItens();
+    int getItens();
 };
 
 #endif
