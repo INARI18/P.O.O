@@ -21,7 +21,7 @@ int main(void) {
 
     switch (tipo) {
         case TipoVeiculo::Carro:
-            V1 = new Carro(432, 2024, "JN1ABCDEFGH1234567", "Nissan Kicks", "Garagem", 4, "automatico"); 
+            V1 = new Carro(432, 2024, "JN1ABCDEFGH123456", "Nissan Kicks", "Garagem", 4, "automatico"); 
             break;
         case TipoVeiculo::Caminhao:
             V1 = new Caminhao(16000, 2022, "9BD111060T5002156", "Bitruck", "Garagem", 2.60, 2.44, 8.00, "Madeira"); //tirar carga do caminhao
@@ -54,7 +54,7 @@ int main(void) {
 
     switch (tipo) {
         case TipoVeiculo::Carro:
-            V2 = new Carro(380, 2023, "1G1FP23E4NL100000", "Nissan Kicks", "Volkswagen Golf", 4, "Automatico"); 
+            V2 = new Carro(380, 2023, "1G1FP23E4NL100000", "Volkswagen Golf", "Garagem", 4, "Automatico"); 
             break;
         case TipoVeiculo::Caminhao:
             V2 = new Caminhao(27000, 2015, "1G1FP23E4NL100000", "Carreta", "Garagem", 2.85, 2.44, 14.8, "Areia");

@@ -22,4 +22,5 @@ public:
     int setCambio(string cambio);
     string getCambio();
 };
+
 #endif

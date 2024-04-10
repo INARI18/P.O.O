@@ -33,10 +33,10 @@ Após, vocês devem implementar uma Classe para gerenciar os veículos. Esta cla
 possuir:
 
 1) Uma lista de veículos ativos da empresa
-2) Uma série de métodos para interagir com os veículos:
-a) adicionarVeiculo(...)
-b) removerVeiculo(...)
-c) buscarVeiculo (por id, placa, etc)
-d) buscarVeiculo (por localização):
-e) obterVeiculosDisponiveis
-f) …
+2) Uma série de métodos para interagir com os veículos: 
+ a) adicionarVeiculo(...) 
+ b) removerVeiculo(...) 
+ c) buscarVeiculo (por id, placa, etc) 
+ d) buscarVeiculo (por localização): 
+ e) obterVeiculosDisponiveis 
+ f) … 
