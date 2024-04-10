@@ -14,7 +14,7 @@ void GerenciaVeiculos::removeVeiculo(const Veiculos v) {
     veiculos.remove(v); // remove da lista
 }
 
-auto GerenciaVeiculos::buscaChassi(string chassi) {
+Veiculos GerenciaVeiculos::buscaChassi(string chassi) {
     if (chassi.size() != 17) {
         throw runtime_error("Chassi invalido");
     }
@@ -24,8 +24,7 @@ auto GerenciaVeiculos::buscaChassi(string chassi) {
             return v;
         }
     }
-    
-    //throw runtime_error("chassi nao encontrado");
+    throw runtime_error("chassi nao encontrado");
 }
 
 list<Veiculos> GerenciaVeiculos::buscaLocalizacao(string localizacao) {

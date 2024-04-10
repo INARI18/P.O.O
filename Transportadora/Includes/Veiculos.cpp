@@ -15,7 +15,7 @@ Veiculos::Veiculos() {
     this->itens = 0;
 }
 
-Veiculos::Veiculos(int cap, int ano, string Vchassi, string modelo, string localizacao, int item){
+Veiculos::Veiculos(int cap, int ano, string Vchassi, string modelo, string localizacao){
     setCapacidade(cap);
     setAno(ano);
     setChassi(Vchassi);
@@ -75,7 +75,7 @@ string Veiculos::getLocalizacao(){
 }
 
 int Veiculos::setDisponibilidade(){
-    if(){
+    if(rand){
         this->disponibilidade = 1;
         return 1;
     }
@@ -86,7 +86,6 @@ int Veiculos::setDisponibilidade(){
 
 int Veiculos::getDisponibilidade(){
     return this->disponibilidade;
-
 }
 
 int Veiculos::setItens() {
