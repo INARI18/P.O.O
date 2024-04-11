@@ -39,8 +39,11 @@ public:
     int setDisponibilidade();
     int getDisponibilidade();
 
-    virtual int setItens();
+    void setItens(int value);
     int getItens();
+    void decrementarItens();
+
+    bool operator==(const Veiculos& outro);
 };
 
 #endif

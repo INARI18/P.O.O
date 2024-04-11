@@ -5,20 +5,26 @@
 #include <string>
 #include <list>
 #include "Veiculos.h"
+#include "Carro.h"
+#include "Caminhonete.h"
+#include "Caminhao.h"
 
 using namespace std;
 
 class GerenciaVeiculos {
 private:
-    list<Veiculos> veiculos;
+    // armazena ponteiros
+    list<Veiculos*> veiculos;
 
 public:
-
-    void adicionaVeiculo(const Veiculos veiculo);
-    void removeVeiculo(const Veiculos veiculo);
-    Veiculos buscaChassi(string chassi);
-    list<Veiculos> buscaLocalizacao(string localizacao);
-    list<Veiculos> veiculosDisponiveis();
+    GerenciaVeiculos();
+    ~GerenciaVeiculos();
+    void adicionaVeiculo(Veiculos *veiculo);
+    void removeVeiculo(Veiculos *veiculo);
+    Veiculos *buscaChassi(string chassi);
+    list<Veiculos*> buscaLocalizacao(string localizacao);
+    list<Veiculos*> veiculosDisponiveis();
+    void imprimeListaVeiculos();
 };
 
 #endif

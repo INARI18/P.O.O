@@ -13,7 +13,7 @@ private:
 public:
     Caminhonete();
     Caminhonete(int cap, int ano, string Vchassi, string modelo, string localizacao, string cacamba);
-    virtual ~Caminhonete();
+    ~Caminhonete();
 
     int setCacamba(string cacamba);
     string getCacamba();

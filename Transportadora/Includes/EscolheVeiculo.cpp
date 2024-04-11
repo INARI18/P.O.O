@@ -16,5 +16,7 @@ TipoVeiculo EscolheVeiculo(const string classe) {
     else if (classe == "Caminhonete") {
         return TipoVeiculo::Caminhonete;
     }
+
+    return TipoVeiculo::Invalido;
 }
 

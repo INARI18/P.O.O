@@ -12,6 +12,7 @@ Caminhonete::Caminhonete(){
 Caminhonete::Caminhonete(int cap, int ano, string Vchassi, string modelo, 
 string localizacao, string cacamba) :Veiculos(cap, ano, Vchassi, modelo, localizacao) {
     setCacamba(cacamba);
+    setItens(10);
 }
 
 Caminhonete::~Caminhonete(){};

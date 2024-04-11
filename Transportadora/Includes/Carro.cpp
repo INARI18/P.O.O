@@ -14,6 +14,7 @@ Carro::Carro(int cap, int ano, string Vchassi, string modelo, string localizacao
 int n_portas, string cambio) :Veiculos (cap, ano, Vchassi, modelo, localizacao){
     setPortas(n_portas);
     setCambio(cambio);
+    setItens(5);
 }
 
 Carro::~Carro(){};
@@ -27,10 +28,10 @@ int Carro::getPortas() {
     return this->portas;
 }
 
-int Carro::setCambio(string cambio) {
+int Carro::setCambio (string cambio) {
     this->Cambio = cambio;
 }
 
-string Carro::getCambio(){
+string Carro::getCambio() {
     return this->Cambio;
 }

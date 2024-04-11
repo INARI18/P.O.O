@@ -52,7 +52,7 @@ int Veiculos::setChassi(string Vchassi) {
     return 0;
 }
 
-string Veiculos::getChassi(){
+string Veiculos::getChassi() {
     return this->chassi;
 }
 
@@ -61,7 +61,7 @@ int Veiculos::setModelo(string modelo) {
     return 1;
 }
 
-string Veiculos::getModelo() {
+string Veiculos::getModelo(){
     return this->modelo;
 }
 
@@ -74,7 +74,7 @@ string Veiculos::getLocalizacao(){
     return this->localizacao;
 }
 
-int Veiculos::setDisponibilidade(){
+int Veiculos::setDisponibilidade() {
     if(rand){
         this->disponibilidade = 1;
         return 1;
@@ -88,11 +88,25 @@ int Veiculos::getDisponibilidade(){
     return this->disponibilidade;
 }
 
-int Veiculos::setItens() {
-    this->itens;
-    return 1;
+void Veiculos::setItens(int value) {
+    itens = value;
 }
 
-int Veiculos::getItens() {
-    return this->itens;
+int Veiculos::getItens(){
+    return itens;
+}
+    
+void Veiculos::decrementarItens() {
+    itens--;
+}
+
+bool Veiculos::operator==(const Veiculos& outro){
+    // Verificar se todos os atributos são iguais
+    return capacidade == outro.capacidade &&
+           ano == outro.ano &&
+           chassi == outro.chassi &&
+           modelo == outro.modelo &&
+           localizacao == outro.localizacao &&
+           disponibilidade == outro.disponibilidade &&
+           itens == outro.itens;
 }

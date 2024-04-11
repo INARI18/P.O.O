@@ -17,10 +17,10 @@ public:
     ~Carro();
 
     int setPortas(int n_portas);
-    int getPortas();
+    int getPortas ();
 
     int setCambio(string cambio);
-    string getCambio();
+    string getCambio ();
 };
 
 #endif

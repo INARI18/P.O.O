@@ -10,6 +10,7 @@ enum class TipoVeiculo {
     Carro,
     Caminhao,
     Caminhonete,
+    Invalido
 };
 
 TipoVeiculo EscolheVeiculo(const string classe);

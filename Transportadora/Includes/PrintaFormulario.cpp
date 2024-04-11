@@ -11,7 +11,9 @@ void PrintaFormulario(Veiculos *pVeiculo, Clientes *pCliente, Pedidos *pPedido) 
     << "\n - Capacidade de carga: " << pVeiculo->getCapacidade() << "Kg"
     << "\n - Ano: " << pVeiculo->getAno()
     << "\n - Chassi: " << pVeiculo->getChassi()
-    << "\n - Localizacao: " << pVeiculo->getLocalizacao();
+    << "\n - Localizacao: " << pVeiculo->getLocalizacao()
+    << "\n - Capacidade Itens: " << pVeiculo->getItens();
+    
 
     // Downcast carro
     Carro *carro = dynamic_cast<Carro*>(pVeiculo);
@@ -32,8 +34,7 @@ void PrintaFormulario(Veiculos *pVeiculo, Clientes *pCliente, Pedidos *pPedido) 
         cout << "\n - Altura: " << fixed << setprecision(2) << caminhao->getAltura() << "m"
         << "\n - Largura: " << fixed << setprecision(2) << caminhao->getLargura() << "m"
         << "\n - Comprimento: " << fixed << setprecision(2) << caminhao->getComprimento() << "m"
-        << "\n - Metros Cubicos: " << fixed << setprecision(2) << caminhao->getM3() << "m3"
-        << "\n - Carga: " << caminhao->getCarga();
+        << "\n - Metros Cubicos: " << fixed << setprecision(2) << caminhao->getM3() << "m3";
     }
 
     cout << "\n\n - Nome: " << pCliente->getNome()

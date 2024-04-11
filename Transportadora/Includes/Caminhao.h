@@ -13,11 +13,10 @@ private:
     float largura;
     float comprimento;
     float m3;
-    string carga;
 public:
     Caminhao();
     Caminhao(int cap, int ano, string Vchassi, string modelo, string localizacao, 
-    float altura, float largura, float c_comprimento, string carga);
+    float altura, float largura, float c_comprimento);
     ~Caminhao();
 
     int setAltura(float c_altura);
@@ -31,9 +30,6 @@ public:
 
     int setM3();
     float getM3();  
-
-    int setCarga(string c_carga);
-    string getCarga(); 
 };
 
 #endif
