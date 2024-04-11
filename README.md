@@ -40,3 +40,23 @@ possuir:
  d) buscarVeiculo (por localização): 
  e) obterVeiculosDisponiveis 
  f) … 
+
+------------------------------------------------------ TAREFA #3 ------------------------------------------------------
+Nesta segunda etapa, vocês devem primeiramente refatorar o código existente da seguinte
+forma:
+
+1) Implementar sobrescrita dos operadores (“==”) e (“<<”) em todas as classes.
+2) Implementar a sobrecarga de métodos (e.g., para permitir que tenham
+múltiplas assinaturas). Um exemplo é a adição de carros.
+3) Implementar a localização dos veículos e ordens baseados em Latitude e
+Longitude.
+
+Após, vocês devem implementar uma Classe para definir uma roteirização de
+entregas/coletas. A classe deve receber como entrada as Ordens e uma instância da classe
+que gerencia os veículos. Esta nova classe deve:
+
+1) Definir quais veículos serão utilizados e;
+2) A ordem de atendimento das demandas. Por exemplo, se a transportadora
+precisa coletar 10 itens, pode-se alocar um caminhão que tenha capacidade
+suficiente para realizar a coleta desses itens. Alternativamente, pode-se
+utilizar múltiplos veículos para a mesma tarefa.
