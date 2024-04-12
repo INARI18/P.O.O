@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <cmath>
 #include "Veiculos.h"
 #include "GerenciaVeiculos.h"
 #include "Pedidos.h"
@@ -18,14 +19,13 @@ private:
     Pedidos entrega;
     Pedidos peso;
     Pedidos itens;
-    float distanciaDLA;
-    float distanciaDLO;
+    float distancia;
 
 public:
     static list<Veiculos> defineVeiculo(string localizacao, Veiculos itens);
 
-    void setDistanciaDLA();
-    float getDistanciaDLA();
+    void setDistancia(Veiculos *veiculo, Pedidos *pedido);
+    float getDistancia();
 
     void setDistanciaDLO();
     float getDistanciaDLO();

@@ -23,13 +23,11 @@ list<Veiculos> Atendimento::defineVeiculo(string localizacao, Veiculos itens) {
 }
 
 void Atendimento::setDistancia(Veiculos *veiculo, Pedidos *pedido) {
-    float diferencaDLA = (veiculo->getLatitude()) - (pedido->getLatitude());
-    float diferencaDLO = (veiculo->getLongitude()) - (pedido->getLongitude());
-    float comprimento;
-    comprimento = (diferencaDLA*diferencaDLA) + (diferencaDLO*diferencaDLO);
-    comprimento = comprimento*comprimento;
-    // fazer a raiz de comprimento(pitágoras)
-    // pow  
+    float diferencaDLA = veiculo->getLatitude() - pedido->getLatitude();
+    float diferencaDLO = veiculo->getLongitude() - pedido->getLongitude();
+    
+    float comprimento = pow(diferencaDLA, 2) + pow(diferencaDLO, 2);
+    this->distancia = sqrt(comprimento);  
 }
 
 float Atendimento::getDistancia() {
