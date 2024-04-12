@@ -9,9 +9,13 @@ GerenciaVeiculos::GerenciaVeiculos() : veiculos() {}
 
 GerenciaVeiculos::~GerenciaVeiculos() {
     // percorre a lista e libera a memoria
-    for (auto veiculo : veiculos) {
-        delete veiculo; 
+    for (auto v : veiculos) {
+        delete v; 
     }
+}
+
+list<Veiculos*> GerenciaVeiculos::getVeiculos()  {
+    return veiculos; 
 }
 
 void GerenciaVeiculos::adicionaVeiculo(Veiculos* veiculo) {
@@ -47,7 +51,7 @@ list<Veiculos*> GerenciaVeiculos::buscaLocalizacao(string localizacao) {
     return veiculosNaLocalizacao; // retorna nova lista
 }
 
-list<Veiculos*> GerenciaVeiculos::veiculosDisponiveis() {
+/*list<Veiculos*> GerenciaVeiculos::veiculosDisponiveis() {
     list<Veiculos*> veiculosDisponiveis; // cria nova lista
     for (auto v : veiculos) {
         if (v->getDisponibilidade() == 1) {
@@ -55,7 +59,7 @@ list<Veiculos*> GerenciaVeiculos::veiculosDisponiveis() {
         }
     }
     return veiculosDisponiveis; // retorna nova lista
-}
+}*/
 
 void GerenciaVeiculos::imprimeListaVeiculos() {
     if (!veiculos.empty()) { // verifica se a lista está vazia 

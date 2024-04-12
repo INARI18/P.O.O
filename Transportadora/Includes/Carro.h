@@ -13,7 +13,7 @@ private:
     string Cambio;
 public:
     Carro();
-    Carro(int cap, int ano, string Vchassi, string modelo, string localizacao, int n_portas, string cambio);
+    Carro(int cap, int ano, string Vchassi, string modelo, string localizacao, int n_portas, string cambio, float LA[3], float LO[3]);
     ~Carro();
 
     int setPortas(int n_portas);

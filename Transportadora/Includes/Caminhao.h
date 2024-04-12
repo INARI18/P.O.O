@@ -16,7 +16,7 @@ private:
 public:
     Caminhao();
     Caminhao(int cap, int ano, string Vchassi, string modelo, string localizacao, 
-    float altura, float largura, float c_comprimento);
+    float altura, float largura, float c_comprimento, float LA[3], float LO[3]);
     ~Caminhao();
 
     int setAltura(float c_altura);

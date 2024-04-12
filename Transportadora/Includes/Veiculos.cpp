@@ -1,4 +1,5 @@
 #include <iostream>
+#include<iomanip>
 #include <string>
 #include "Veiculos.h"
 
@@ -17,13 +18,15 @@ Veiculos::Veiculos() {
     this->longitude = 0.0;
 }
 
-Veiculos::Veiculos(int cap, int ano, string Vchassi, string modelo, string localizacao){
+Veiculos::Veiculos(int cap, int ano, string Vchassi, string modelo, string localizacao, float LA[3], float LO[3]){
     setCapacidade(cap);
     setAno(ano);
     setChassi(Vchassi);
     setModelo(modelo);
     setLocalizacao(localizacao); 
-    setDisponibilidade();
+    //setDisponibilidade();
+    setLatitude(LA);
+    setLongitude(LO);
 }
 
 Veiculos::~Veiculos(){}
@@ -76,7 +79,7 @@ string Veiculos::getLocalizacao(){
     return this->localizacao;
 }
 
-int Veiculos::setDisponibilidade() {
+/*int Veiculos::setDisponibilidade() {
     if(rand){
         this->disponibilidade = 1;
         return 1;
@@ -88,7 +91,7 @@ int Veiculos::setDisponibilidade() {
 
 int Veiculos::getDisponibilidade(){
     return this->disponibilidade;
-}
+}*/
 
 void Veiculos::setItens(int value) {
     itens = value;
@@ -117,7 +120,7 @@ void Veiculos::setLatitude(float LA[3]) {
             z = LA[i]/60;
         }
 
-        total1 = (x + y + z)*1852;
+        total1 = (x + y + z)*111.32;
     }
 
     this->latitude = total1;
@@ -142,7 +145,7 @@ void Veiculos::setLongitude(float LO[3]) {
             z = LO[i]/60;
         }
 
-        total2 = (x + y + z)*1852;
+        total2 = (x + y + z)*111.32; //  convertendo nm para km
     }
 
     this->longitude = total2;
@@ -152,7 +155,15 @@ float Veiculos::getLongitude() {
     return this->longitude;
 }
 
-bool Veiculos::operator==(const Veiculos& outro){
+void Veiculos::setDistanciaA(float d) {
+    this->distanciaA = d;
+}
+
+float Veiculos::getDistanciaA() {
+    return this->distanciaA;
+}
+
+/*bool Veiculos::operator==(const Veiculos& outro){
     // Verificar se todos os atributos são iguais
     return capacidade == outro.capacidade &&
            ano == outro.ano &&
@@ -161,4 +172,4 @@ bool Veiculos::operator==(const Veiculos& outro){
            localizacao == outro.localizacao &&
            disponibilidade == outro.disponibilidade &&
            itens == outro.itens;
-}
+}*/

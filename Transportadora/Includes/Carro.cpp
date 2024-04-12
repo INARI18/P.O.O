@@ -11,7 +11,7 @@ Carro::Carro() {
 }
 
 Carro::Carro(int cap, int ano, string Vchassi, string modelo, string localizacao, 
-int n_portas, string cambio) :Veiculos (cap, ano, Vchassi, modelo, localizacao){
+int n_portas, string cambio, float LA[3], float LO[3]) :Veiculos (cap, ano, Vchassi, modelo, localizacao, LA, LO){
     setPortas(n_portas);
     setCambio(cambio);
     setItens(5);

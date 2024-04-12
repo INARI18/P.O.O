@@ -13,7 +13,7 @@ Caminhao::Caminhao(){
 }
 
 Caminhao::Caminhao(int cap, int ano, string Vchassi, string modelo, string localizacao, 
-float c_altura, float c_largura, float c_comprimento) :Veiculos(cap, ano, Vchassi, modelo, localizacao){
+float c_altura, float c_largura, float c_comprimento, float LA[3], float LO[3]) :Veiculos(cap, ano, Vchassi, modelo, localizacao, LA, LO){
     setAltura(c_altura);
     setLargura(c_largura);
     setComprimento(c_comprimento);

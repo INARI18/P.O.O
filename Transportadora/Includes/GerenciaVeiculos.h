@@ -19,11 +19,16 @@ private:
 public:
     GerenciaVeiculos();
     ~GerenciaVeiculos();
+
+    list<Veiculos*> getVeiculos(); // retorna a lista de veiculos
+
     void adicionaVeiculo(Veiculos *veiculo);
     void removeVeiculo(Veiculos *veiculo);
+    
     Veiculos *buscaChassi(string chassi);
     list<Veiculos*> buscaLocalizacao(string localizacao);
-    list<Veiculos*> veiculosDisponiveis();
+    
+    //list<Veiculos*> veiculosDisponiveis();
     void imprimeListaVeiculos();
 };
 

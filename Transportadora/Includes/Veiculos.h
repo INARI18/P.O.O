@@ -17,10 +17,11 @@ private:
     int itens;
     float latitude;
     float longitude;
+    float distanciaA;
 
 public:
     Veiculos();
-    Veiculos(int cap, int ano, string Vchassi, string modelo, string localizacao); // construtor
+    Veiculos(int cap, int ano, string Vchassi, string modelo, string localizacao, float LA[3], float LO[3]); // construtor
     virtual ~Veiculos();
 
     int setCapacidade(int cap);
@@ -51,7 +52,10 @@ public:
     void setLongitude(float LO[3]);
     float getLongitude();
 
-    bool operator==(const Veiculos& outro);
+    void setDistanciaA(float d);
+    float getDistanciaA();
+
+    //bool operator==(const Veiculos& outro);
 };
 
 #endif
