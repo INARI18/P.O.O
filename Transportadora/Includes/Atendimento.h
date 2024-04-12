@@ -18,9 +18,17 @@ private:
     Pedidos entrega;
     Pedidos peso;
     Pedidos itens;
+    float distanciaDLA;
+    float distanciaDLO;
 
 public:
     static list<Veiculos> defineVeiculo(string localizacao, Veiculos itens);
+
+    void setDistanciaDLA();
+    float getDistanciaDLA();
+
+    void setDistanciaDLO();
+    float getDistanciaDLO();
 };
 
 #endif

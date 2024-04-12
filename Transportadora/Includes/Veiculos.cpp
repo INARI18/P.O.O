@@ -13,6 +13,8 @@ Veiculos::Veiculos() {
     this->localizacao = "";
     this->disponibilidade = 1;
     this->itens = 0;
+    this->latitude = 0.0;
+    this->longitude = 0.0;
 }
 
 Veiculos::Veiculos(int cap, int ano, string Vchassi, string modelo, string localizacao){
@@ -98,6 +100,58 @@ int Veiculos::getItens(){
     
 void Veiculos::decrementarItens() {
     itens--;
+}
+
+float Veiculos::setLatitude(float LA[3]) {
+    float x, y, z, total1;
+    for(int i = 0; i < 3; i++) {
+        if(i == 0) {
+            x = LA[i]*60;
+        }
+
+        if(i == 1) {
+            y = LA[i]; // * 1
+        }
+
+        if(i == 2) {
+            z = LA[i]/60;
+        }
+
+        total1 = (x + y + z)*1852;
+    }
+
+    this->latitude = total1;
+    return total1;
+}
+
+float Veiculos::getLatitude() {
+    return this->latitude;
+}
+
+float Veiculos::setLongitude(float LO[3]) {
+    float x, y, z, total2;
+    for(int i = 0; i < 3; i++) {
+        if(i == 0) {
+            x = LO[i]*60;
+        }
+
+        if(i == 1) {
+            y = LO[i]; // * 1
+        }
+
+        if(i == 2) {
+            z = LO[i]/60;
+        }
+
+        total2 = (x + y + z)*1852;
+    }
+
+    this->longitude = total2;
+    return total2;
+}
+
+float Veiculos::getLongitude() {
+    return this->longitude;
 }
 
 bool Veiculos::operator==(const Veiculos& outro){

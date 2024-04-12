@@ -1,8 +1,6 @@
 #include <iostream>
 #include <string>
-#include "Veiculos.h"
-#include "GerenciaVeiculos.h"
-#include "Pedidos.h"
+#include <cmath>
 #include "Atendimento.h"
 
 using namespace std;
@@ -23,3 +21,18 @@ list<Veiculos> Atendimento::defineVeiculo(string localizacao, Veiculos itens) {
     // Se nenhum veículo atender aos requisitos, lança uma exceção
     throw runtime_error("Nenhum veículo disponível atende aos requisitos");
 }
+
+void Atendimento::setDistancia() {
+    float diferencaDLA = &(Veiculos veiculo.setLatitude()) - &(Pedidos pedido.setLatitudeP());
+    float diferencaDLO = &(Veiculos veiculo.setLongitude()) - &(Pedidos pedido.setLongitudeP());
+    float comprimento;
+    (comprimento*comprimento) = (diferencaDLA*diferencaDLA) + (diferencaDLO*diferencaDLO);
+    // fazer a raiz de tudo (pitágoras)
+
+}
+float Atendimento::getDistancia() {
+    return this->distanciaDLA;
+}
+
+
+

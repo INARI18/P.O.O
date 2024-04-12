@@ -43,6 +43,12 @@ public:
     int getItens();
     void decrementarItens();
 
+    void setLatitude(float LA[3]);
+    float getLatitude();
+
+    void setLongitude(float LO[3]);
+    float getLongitude();
+
     bool operator==(const Veiculos& outro);
 };
 
