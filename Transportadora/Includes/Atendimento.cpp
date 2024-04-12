@@ -22,16 +22,18 @@ list<Veiculos> Atendimento::defineVeiculo(string localizacao, Veiculos itens) {
     throw runtime_error("Nenhum veículo disponível atende aos requisitos");
 }
 
-void Atendimento::setDistancia() {
-    float diferencaDLA = &(Veiculos veiculo.setLatitude()) - &(Pedidos pedido.setLatitudeP());
-    float diferencaDLO = &(Veiculos veiculo.setLongitude()) - &(Pedidos pedido.setLongitudeP());
+void Atendimento::setDistancia(Veiculos *veiculo, Pedidos *pedido) {
+    float diferencaDLA = (veiculo->getLatitude()) - (pedido->getLatitude());
+    float diferencaDLO = (veiculo->getLongitude()) - (pedido->getLongitude());
     float comprimento;
-    (comprimento*comprimento) = (diferencaDLA*diferencaDLA) + (diferencaDLO*diferencaDLO);
-    // fazer a raiz de tudo (pitágoras)
-
+    comprimento = (diferencaDLA*diferencaDLA) + (diferencaDLO*diferencaDLO);
+    comprimento = comprimento*comprimento;
+    // fazer a raiz de comprimento(pitágoras)
+    // pow  
 }
+
 float Atendimento::getDistancia() {
-    return this->distanciaDLA;
+    return this->distancia;
 }
 
 

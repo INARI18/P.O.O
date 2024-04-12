@@ -102,7 +102,7 @@ void Veiculos::decrementarItens() {
     itens--;
 }
 
-float Veiculos::setLatitude(float LA[3]) {
+void Veiculos::setLatitude(float LA[3]) {
     float x, y, z, total1;
     for(int i = 0; i < 3; i++) {
         if(i == 0) {
@@ -121,14 +121,13 @@ float Veiculos::setLatitude(float LA[3]) {
     }
 
     this->latitude = total1;
-    return total1;
 }
 
 float Veiculos::getLatitude() {
     return this->latitude;
 }
 
-float Veiculos::setLongitude(float LO[3]) {
+void Veiculos::setLongitude(float LO[3]) {
     float x, y, z, total2;
     for(int i = 0; i < 3; i++) {
         if(i == 0) {
@@ -147,7 +146,6 @@ float Veiculos::setLongitude(float LO[3]) {
     }
 
     this->longitude = total2;
-    return total2;
 }
 
 float Veiculos::getLongitude() {

@@ -15,6 +15,8 @@ private:
     string localizacao;
     int disponibilidade;
     int itens;
+    float latitude;
+    float longitude;
 
 public:
     Veiculos();
