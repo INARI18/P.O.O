@@ -21,15 +21,15 @@ private:
     Pedidos itens;*/
 
 public:
-    Atendimento(Veiculos *veiculo, Pedidos *pedido);
+    Atendimento();
     ~Atendimento();
 
     //static list<Veiculos> defineVeiculo(string localizacao, Veiculos itens);
 
-    void setDistancia(Veiculos *veiculo, Pedidos *pedido);
-    float getDistancia(Veiculos *veiculo);
+    float CalculaDistancia(Veiculos *veiculo, Pedidos *pedido);
+    //float getDistancia(Veiculos *veiculo);
 
-    Veiculos* MenorDistancia(GerenciaVeiculos *objeto2, Pedidos *pedido);
+    Veiculos* CalculaMenorDistancia(GerenciaVeiculos *objeto2, Pedidos *pedido);
 };
 
 #endif

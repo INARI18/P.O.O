@@ -15,7 +15,6 @@ private:
     float peso;
     float latitude;
     float longitude;
-    float distanciaP;
 
 public:
     Pedidos();
@@ -42,9 +41,6 @@ public:
 
     void setLongitude(float LO[3]);
     float getLongitude();
-
-    void setDistanciaP(float d);
-    float getDistanciaP();
 };
 
 #endif

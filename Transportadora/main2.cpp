@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <time.h>
 #include "Includes/Veiculos.h"
 #include "Includes/Clientes.h"
 #include "Includes/Pedidos.h"
@@ -65,7 +66,7 @@ int main(void) {
                 return 0;
         }
 
-        Atendimento *novo = new Atendimento(V1, P1);
+        Atendimento *novo = new Atendimento;
         
         cout << "Deseja Imprimir a lista de veiculos? (Digite SIM ou NAO): ";
         cin >> resposta2;
@@ -144,18 +145,7 @@ int main(void) {
         cin >> resposta4;
 
         if(resposta4 == "SIM") {
-            cout << "\nLatitude V1: " << fixed << setprecision(2) << V1->getLatitude() 
-            << "\nLongitude V1: " << fixed << setprecision(2) << V1->getLongitude()
-
-            << "\n\nLatitude V2: " << fixed << setprecision(2) << V2->getLatitude() 
-            << "\nLongitude V2: " << fixed << setprecision(2) << V2->getLongitude()
-
-            << "\n\nLatitudeP: " << fixed << setprecision(2) << P1->getLatitude()
-            << "\nLongitudeP: " << fixed << setprecision(2) << P1->getLongitude() << endl;
-
-            novo->MenorDistancia(gerenciador, P1);
-            cout << "\nDistancia V1: " << fixed << setprecision(2) << novo->getDistancia(V1) << "km" 
-            << "\nDistancia V2: " << fixed << setprecision(2) << novo->getDistancia(V2) << "km" << endl;
+            novo->CalculaMenorDistancia(gerenciador, P1);
         }
 
         delete V1;

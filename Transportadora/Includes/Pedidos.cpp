@@ -114,11 +114,3 @@ void Pedidos::setLongitude(float LO[3]) {
 float Pedidos::getLongitude() {
     return this->longitude;
 }
-
-void Pedidos::setDistanciaP(float d) {
-    this->distanciaP = d;
-}
-
-float Pedidos::getDistanciaP() {
-    return this->distanciaP;
-}
