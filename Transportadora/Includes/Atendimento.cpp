@@ -35,8 +35,7 @@ void Atendimento::setDistancia(Veiculos *veiculo, Pedidos *pedido) {
     float comprimento = pow(diferencaDLA, 2) + pow(diferencaDLO, 2);
     float distancia = sqrt(comprimento); // Calcula a distância entre o veículo e o pedido
 
-    veiculo->setDistanciaA(distancia); // Define a distância no veículo
-    pedido->setDistanciaP(distancia); 
+    return; 
 }
 
 float Atendimento::getDistancia(Veiculos *veiculo) {
@@ -78,7 +77,8 @@ Veiculos* Atendimento::MenorDistancia(GerenciaVeiculos *objeto2, Pedidos *pedido
     }
 
     if (veiculoMaisProximo != nullptr) { // Verifica se um veículo foi encontrado
-        cout << "Veiculo mais proximo: " << veiculoMaisProximo->getModelo() << endl;
+        cout << "Veiculo mais proximo: " << veiculoMaisProximo->getModelo()
+        << "Distancia: " << veiculoMaisProximo->getModelo() << endl;
         return veiculoMaisProximo; // Retorna o veículo mais próximo
     } else {
         throw runtime_error("Erro! Veiculo nao encontrado!");
