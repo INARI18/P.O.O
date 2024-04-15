@@ -42,7 +42,7 @@ possuir:
  f) … 
 
 ------------------------------------------------------ TAREFA #3 ------------------------------------------------------
-Nesta segunda etapa, vocês devem primeiramente refatorar o código existente da seguinte
+Nesta terceira etapa, vocês devem primeiramente refatorar o código existente da seguinte
 forma:
 
 1) Implementar sobrescrita dos operadores (“==”) e (“<<”) em todas as classes.
