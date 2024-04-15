@@ -10,17 +10,8 @@ Atendimento::Atendimento() {
 
 Atendimento::~Atendimento(){}
 
-/*list<Veiculos> Atendimento::defineVeiculo(string localizacao, Veiculos itens) {
-    list<Veiculos> veiculosNaLocalizacao = GerenciaVeiculos::buscaLocalizacao(localizacao);
-    for (auto& veiculo : veiculosNaLocalizacao) {
-        if (veiculo.getItens() >= itens && veiculo.getDisponibilidade() == 1) {
-            return veiculosNaLocalizacao;
-        }
-    }
-    throw runtime_error("Nenhum veículo disponível atende aos requisitos");
-}*/
 
-/*void Atendimento::setDistancia(Carro *carro, Pedidos *pedido) {
+void Atendimento::setDistancia(Carro *carro, Pedidos *pedido) {
     float diferencaDLA = carro->getLatitude() - pedido->getLatitude();
     float diferencaDLO = carro->getLongitude() - pedido->getLongitude();
     
@@ -60,7 +51,7 @@ float Atendimento::getDistancia(Caminhonete *caminhonete) {
 
 float Atendimento::getDistancia(Caminhao *caminhao) {
     return caminhao->getDistanciaA();
-}*/
+}
 
 
 Veiculos* Atendimento::MenorDistancia(GerenciaVeiculos *objeto2, Pedidos *pedido) {

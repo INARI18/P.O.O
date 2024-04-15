@@ -17,7 +17,6 @@ protected:
     int itens;
     float latitude;
     float longitude;
-    float distanciaA;
 
 public:
     Veiculos();
@@ -51,9 +50,6 @@ public:
 
     void setLongitude(float LO[3]);
     float getLongitude();
-
-    void setDistanciaA(float d);
-    float getDistanciaA();
 
     //bool operator==(const Veiculos& outro);
 };
