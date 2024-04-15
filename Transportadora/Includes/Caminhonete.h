@@ -17,6 +17,8 @@ public:
 
     int setCacamba(string cacamba);
     string getCacamba();
+
+    friend ostream& operator<<(ostream& out, Caminhonete *caminhonete);
 };
 
 #endif

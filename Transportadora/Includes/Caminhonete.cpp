@@ -26,3 +26,12 @@ string Caminhonete::getCacamba() {
     return this->Cacamba;
 }
 
+ostream& operator<<(ostream& out, Caminhonete *caminhonete) {
+    out << "Capacidade: " << caminhonete->getCapacidade() << 
+    "\nModelo: " << caminhonete->getModelo() << 
+    "\nAno: " << caminhonete->getAno() << 
+    "\nChassi: " << caminhonete->getChassi() << 
+    "\nLocalizacao: " << caminhonete->getLocalizacao() <<
+    "\nCacamba: " << caminhonete->getCacamba();
+    return out;
+}

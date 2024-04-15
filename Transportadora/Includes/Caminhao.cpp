@@ -58,3 +58,16 @@ int Caminhao::setM3(){
 float Caminhao::getM3() {
     return this->m3;
 }
+
+ostream& operator<<(ostream& out, Caminhao *caminhao) {
+    out << "Capacidade: " << caminhao->getCapacidade() << 
+    "\nModelo: " << caminhao->getModelo() << 
+    "\nAno: " << caminhao->getAno() << 
+    "\nChassi: " << caminhao->getChassi() << 
+    "\nLocalizacao: " << caminhao->getLocalizacao() <<
+    "\nAltura: " << caminhao->getAltura() <<
+    "\nLargura: " << caminhao->getLargura() <<
+    "\nComprimento: " << caminhao->getComprimento() <<
+    "\nMetros Cubicos: " << caminhao->getM3(); 
+    return out;
+}

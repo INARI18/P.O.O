@@ -6,9 +6,8 @@
 using namespace std;
 
 GerenciaVeiculos::GerenciaVeiculos() : veiculos() {}
-
 GerenciaVeiculos::~GerenciaVeiculos() {
-    // percorre a lista e libera a memoria
+    // percorre a lista e libera memoria
     for (auto v : veiculos) {
         delete v; 
     }
@@ -18,13 +17,25 @@ list<Veiculos*> GerenciaVeiculos::getVeiculos()  {
     return veiculos; 
 }
 
-void GerenciaVeiculos::adicionaVeiculo(Veiculos* veiculo) {
-    veiculos.push_back(veiculo); // adiciona no final da lista
-    cout << "Veiculo adicionado: " << veiculo->getModelo() << endl;
+
+void GerenciaVeiculos::adicionaVeiculo(Carro* carro) {
+    veiculos.push_back(carro); 
+    cout << "Veiculo adicionado: " << carro->getModelo() << endl;
 }
 
-void GerenciaVeiculos::removeVeiculo(Veiculos *veiculo) {
-    veiculos.remove(veiculo); // remove da lista
+void GerenciaVeiculos::adicionaVeiculo(Caminhonete* caminhonete) {
+    veiculos.push_back(caminhonete); 
+    cout << "Veiculo adicionado: " << caminhonete->getModelo() << endl;
+}
+
+void GerenciaVeiculos::adicionaVeiculo(Caminhao* caminhao) {
+    veiculos.push_back(caminhao); 
+    cout << "Veiculo adicionado: \n" << caminhao->getModelo() << endl;
+}
+
+void GerenciaVeiculos::removeVeiculo(Veiculos *veiculo){
+    veiculos.remove(veiculo); 
+    delete veiculo;
     cout << "Veiculo removido: " << veiculo->getModelo() << endl;
 }
 

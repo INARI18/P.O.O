@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-
 #include "Carro.h"
 
 using namespace std;
@@ -34,4 +33,15 @@ int Carro::setCambio (string cambio) {
 
 string Carro::getCambio() {
     return this->Cambio;
+}
+
+ostream& operator<<(ostream& out, Carro* carro) {
+    out << "Capacidade: " << carro->getCapacidade() << 
+    "\nModelo: " << carro->getModelo() << 
+    "\nAno: " << carro->getAno() << 
+    "\nChassi: " << carro->getChassi() << 
+    "\nLocalizacao: " << carro->getLocalizacao() <<
+    "\nNumero de Portas: " << carro->getPortas() <<
+    "\nCambio: " << carro->getCambio(); 
+    return out;
 }

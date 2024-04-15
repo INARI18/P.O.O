@@ -21,6 +21,8 @@ public:
 
     int setCambio(string cambio);
     string getCambio ();
+
+    friend ostream& operator<<(ostream& out, Carro* carro);
 };
 
 #endif

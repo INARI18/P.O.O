@@ -30,6 +30,8 @@ public:
 
     int setM3();
     float getM3();  
+
+    friend ostream& operator<<(ostream& out, Caminhao *caminhao);
 };
 
 #endif

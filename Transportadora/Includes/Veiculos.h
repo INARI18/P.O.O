@@ -7,7 +7,7 @@
 using namespace std; // simplifica a sintaxe do código
 
 class Veiculos {
-private:
+protected:
     int capacidade;
     int ano;
     string chassi;

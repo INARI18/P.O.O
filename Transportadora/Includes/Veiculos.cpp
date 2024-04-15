@@ -163,6 +163,7 @@ float Veiculos::getDistanciaA() {
     return this->distanciaA;
 }
 
+
 /*bool Veiculos::operator==(const Veiculos& outro){
     // Verificar se todos os atributos são iguais
     return capacidade == outro.capacidade &&

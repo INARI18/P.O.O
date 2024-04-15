@@ -5,63 +5,63 @@
 
 using namespace std;
 
-Atendimento::Atendimento(Veiculos *veiculo, Pedidos *pedido) {
-  setDistancia(veiculo, pedido);
+Atendimento::Atendimento() {
 }
 
 Atendimento::~Atendimento(){}
 
 /*list<Veiculos> Atendimento::defineVeiculo(string localizacao, Veiculos itens) {
-    // Chama o método buscaLocalizacao da classe GerenciaVeiculos para obter a lista de veículos na localização especificada
     list<Veiculos> veiculosNaLocalizacao = GerenciaVeiculos::buscaLocalizacao(localizacao);
-
-    // Percorre a lista de veículos na localização
     for (auto& veiculo : veiculosNaLocalizacao) {
-        // Verifica se o veículo atende aos requisitos de itens e disponibilidade
         if (veiculo.getItens() >= itens && veiculo.getDisponibilidade() == 1) {
-            // Retorna o veículo que atende aos requisitos
             return veiculosNaLocalizacao;
         }
     }
-
-    // Se nenhum veículo atender aos requisitos, lança uma exceção
     throw runtime_error("Nenhum veículo disponível atende aos requisitos");
 }*/
 
-void Atendimento::setDistancia(Veiculos *veiculo, Pedidos *pedido) {
-    float diferencaDLA = veiculo->getLatitude() - pedido->getLatitude();
-    float diferencaDLO = veiculo->getLongitude() - pedido->getLongitude();
+/*void Atendimento::setDistancia(Carro *carro, Pedidos *pedido) {
+    float diferencaDLA = carro->getLatitude() - pedido->getLatitude();
+    float diferencaDLO = carro->getLongitude() - pedido->getLongitude();
     
     float comprimento = pow(diferencaDLA, 2) + pow(diferencaDLO, 2);
-    float distancia = sqrt(comprimento); // Calcula a distância entre o veículo e o pedido
+    float distancia = sqrt(comprimento);
 
     return; 
 }
 
-float Atendimento::getDistancia(Veiculos *veiculo) {
-    return veiculo->getDistanciaA();
+void Atendimento::setDistancia(Caminhonete *caminhonete, Pedidos *pedido) {
+    float diferencaDLA = caminhonete->getLatitude() - pedido->getLatitude();
+    float diferencaDLO = caminhonete->getLongitude() - pedido->getLongitude();
+    
+    float comprimento = pow(diferencaDLA, 2) + pow(diferencaDLO, 2);
+    float distancia = sqrt(comprimento);
+
+    return; 
 }
 
-/*Veiculos* Atendimento::MenorDistancia(Atendimento *objeto, GerenciaVeiculos *objeto2) {
-    float menorD = 4400.0;
-    Veiculos* veiculoMaisProximo = nullptr;
+void Atendimento::setDistancia(Caminhao *caminhao, Pedidos *pedido) {
+    float diferencaDLA = caminhao->getLatitude() - pedido->getLatitude();
+    float diferencaDLO = caminhao->getLongitude() - pedido->getLongitude();
+    
+    float comprimento = pow(diferencaDLA, 2) + pow(diferencaDLO, 2);
+    float distancia = sqrt(comprimento);
 
-    for(auto &v : objeto2->getVeiculos()) {
-        v->setDistanciaA(getDistancia());
-        float distancia = objeto->getDistancia(); // Obtém a distância atual
-        if(distancia < menorD) { // Se a distância for menor do que a menor distância encontrada até agora
-            menorD = distancia; // Atualize a menor distância
-            veiculoMaisProximo = v; // Atualize o veículo mais próximo
-        }
-    }
+    return; 
+}
 
-    if (veiculoMaisProximo != nullptr) { // Verifica se um veículo foi encontrado
-        cout << "Veiculo mais proximo: " << veiculoMaisProximo->getModelo() << endl;
-        return veiculoMaisProximo; // Retorna o veículo mais próximo
-    } else {
-        throw runtime_error("Erro! Veiculo nao encontrado!");
-    }
+float Atendimento::getDistancia(Carro *carro) {
+    return carro->getDistanciaA();
+}
+
+float Atendimento::getDistancia(Caminhonete *caminhonete) {
+    return caminhonete->getDistanciaA();
+}
+
+float Atendimento::getDistancia(Caminhao *caminhao) {
+    return caminhao->getDistanciaA();
 }*/
+
 
 Veiculos* Atendimento::MenorDistancia(GerenciaVeiculos *objeto2, Pedidos *pedido) {
     float menorD = 4400.0;

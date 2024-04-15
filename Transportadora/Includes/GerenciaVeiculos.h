@@ -22,7 +22,10 @@ public:
 
     list<Veiculos*> getVeiculos(); // retorna a lista de veiculos
 
-    void adicionaVeiculo(Veiculos *veiculo);
+    void adicionaVeiculo(Carro *carro);
+    void adicionaVeiculo(Caminhonete *caminhonete);
+    void adicionaVeiculo(Caminhao *caminhao);
+    
     void removeVeiculo(Veiculos *veiculo);
     
     Veiculos *buscaChassi(string chassi);
