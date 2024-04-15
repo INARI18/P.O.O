@@ -17,6 +17,7 @@ int main(void) {
     string resposta = "SIM";
     string resposta2;
     string resposta3;
+    string resposta4;
     string classe;
     string n_chassi;
 
@@ -32,17 +33,18 @@ int main(void) {
     float LAv3[3] = {22.0, 30.0, 44.04};
     float LOv3[3] = {52.0, 07.0, 30.2};
 
-    Pedidos *P1 = new Pedidos("Teclado", "Sao Paulo, SP", "Alegrete, RS", 0.556, LAp, LOp);
-
     while (resposta == "SIM") {
-        cout << "Digite o tipo de veiculo (Carro, Caminhao, Caminhonete): ";
-        cin >> classe;
 
         TipoVeiculo tipo = EscolheVeiculo(classe);
         GerenciaVeiculos *gerenciador = new GerenciaVeiculos;
         Carro *carro1 = nullptr;
         Caminhao *caminhao1 = nullptr;
         Caminhonete *caminhonete1 = nullptr;
+        Atendimento *novoAtendimento = new Atendimento;
+        Pedidos *P1 = new Pedidos("Teclado", "Sao Paulo, SP", "Alegrete, RS", 0.556, LAp, LOp);
+
+        cout << "Digite o tipo de veiculo que deseja adicionar (Carro, Caminhao, Caminhonete): ";
+        cin >> classe;
 
         switch (tipo) {
             case TipoVeiculo::Carro: {
@@ -77,15 +79,54 @@ int main(void) {
             gerenciador->removeVeiculo(gerenciador->buscaChassi(n_chassi));
         }
 
-        cout << "Deseja imprimir a lista de Veiculos? (Digite SIM ou NAO): ";
+        cout << "Deseja adicionar mais um Veiculo? (Digite SIM ou NAO): ";
         cin >> resposta3;
 
         if(resposta3 == "SIM") {
+            cout << "Digite o tipo de veiculo que deseja adicionar (Carro, Caminhao, Caminhonete): ";
+        cin >> classe;
+
+            Carro *carro2 = nullptr;
+            Caminhao *caminhao2 = nullptr;
+            Caminhonete *caminhonete2 = nullptr;
+
+            switch (tipo) {
+                case TipoVeiculo::Carro: {
+                    carro2 = new Carro(432, 2024, "JN1ABCDEFGH123456", "Nissan Kicks", "Garagem", 4, "automatico", LAv3, LOv3);
+                    gerenciador->adicionaVeiculo(carro2);
+                    cout << "" << carro2 << endl; 
+                    break;
+                }
+                case TipoVeiculo::Caminhao: {
+                    caminhao2 = new Caminhao(27000, 2015, "ZG1LM23N4OP105780", "Carreta", "Garagem", 2.85, 2.44, 14.8, LAv, LOv);
+                    gerenciador->adicionaVeiculo(caminhao2);
+                    cout << "" << caminhao2 << endl; 
+                    break;
+                }
+                case TipoVeiculo::Caminhonete: {
+                    caminhonete2 = new Caminhonete(1200, 2004, "1GCHK24U64E121748", "Ford F-150", "Garagem", "Aberta", LAv2, LOv2);
+                    gerenciador->adicionaVeiculo(caminhonete2);
+                    cout << "" << caminhonete2 << endl; 
+                    break;
+                }
+                default:
+                    cout << "Tipo de veiculo nao reconhecido." << endl;
+                    break;
+            }
+        }
+
+        cout << "Deseja imprimir a lista de Veiculos? (Digite SIM ou NAO): ";
+        cin >> resposta4;
+
+        if(resposta4 == "SIM") {
             gerenciador->imprimeListaVeiculos();
         }
         
+        novoAtendimento->MenorDistancia(gerenciador, P1);
 
         delete gerenciador;
+        delete P1;
+
         if(carro1 != nullptr) {
             delete carro1;
         }
@@ -97,6 +138,7 @@ int main(void) {
         if(caminhao1 != nullptr) {
             delete caminhao1;
         }
+
     }
 
     return 0;

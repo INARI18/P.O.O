@@ -12,24 +12,17 @@ using namespace std;
 
 class Atendimento{
 private:
-    /*GerenciaVeiculos localizacao;
-    Veiculos itens;
-    Veiculos disponibilidade;
-    Pedidos coleta;
-    Pedidos entrega;
-    Pedidos peso;
-    Pedidos itens;*/
 
 public:
     Atendimento();
     ~Atendimento();
 
-    //static list<Veiculos> defineVeiculo(string localizacao, Veiculos itens);
-
+    float CalculaDistancia(Carro *carro, Pedidos *pedido);
+    float CalculaDistancia(Caminhao *caminhao, Pedidos *pedido);
+    float CalculaDistancia(Caminhonete *caminhonete, Pedidos *pedido);
     float CalculaDistancia(Veiculos *veiculo, Pedidos *pedido);
-    //float getDistancia(Veiculos *veiculo);
 
-    Veiculos* CalculaMenorDistancia(GerenciaVeiculos *objeto2, Pedidos *pedido);
+    Veiculos *MenorDistancia(GerenciaVeiculos *objeto2, Pedidos *pedido);
 };
 
 #endif
