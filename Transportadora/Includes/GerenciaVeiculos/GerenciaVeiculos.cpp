@@ -17,20 +17,9 @@ list<Veiculos*> GerenciaVeiculos::getVeiculos()  {
     return veiculos; 
 }
 
-
-void GerenciaVeiculos::adicionaVeiculo(Carro* carro) {
-    veiculos.push_back(carro); 
-    cout << "Veiculo adicionado: " << carro->getModelo() << endl;
-}
-
-void GerenciaVeiculos::adicionaVeiculo(Caminhonete* caminhonete) {
-    veiculos.push_back(caminhonete); 
-    cout << "Veiculo adicionado: " << caminhonete->getModelo() << endl;
-}
-
-void GerenciaVeiculos::adicionaVeiculo(Caminhao* caminhao) {
-    veiculos.push_back(caminhao); 
-    cout << "Veiculo adicionado: \n" << caminhao->getModelo() << endl;
+void GerenciaVeiculos::adicionaVeiculo(Veiculos* veiculo) {
+    veiculos.push_back(veiculo); 
+    cout << "Veiculo adicionado: \n" << veiculo->getModelo() << endl;
 }
 
 void GerenciaVeiculos::removeVeiculo(Veiculos *veiculo){

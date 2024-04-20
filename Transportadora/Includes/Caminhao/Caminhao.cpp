@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include "Caminhao.h"
-#include "Veiculos.h"
 
 using namespace std;
 

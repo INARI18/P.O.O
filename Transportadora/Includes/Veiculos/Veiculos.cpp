@@ -80,7 +80,7 @@ string Veiculos::getLocalizacao(){
 }
 
 /*int Veiculos::setDisponibilidade() {
-    if(rand){
+    if(){
         this->disponibilidade = 1;
         return 1;
     }
@@ -155,13 +155,14 @@ float Veiculos::getLongitude() {
     return this->longitude;
 }
 
-/*bool Veiculos::operator==(const Veiculos& outro){
-    // Verificar se todos os atributos são iguais
-    return capacidade == outro.capacidade &&
-           ano == outro.ano &&
-           chassi == outro.chassi &&
-           modelo == outro.modelo &&
-           localizacao == outro.localizacao &&
-           disponibilidade == outro.disponibilidade &&
-           itens == outro.itens;
-}*/
+ostream& operator<<(ostream& out, Veiculos* veiculo) {
+    out << "Capacidade: " << veiculo->getCapacidade() << 
+    "\nModelo: " << veiculo->getModelo() << 
+    "\nAno: " << veiculo->getAno() << 
+    "\nChassi: " << veiculo->getChassi() << 
+    "\nLocalizacao: " << veiculo->getLocalizacao() <<
+    "\nLatitude: " << veiculo->getLatitude() <<
+    "\nLongitude: " << veiculo->getLongitude(); 
+    return out;
+}
+

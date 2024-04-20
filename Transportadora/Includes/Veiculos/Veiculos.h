@@ -50,7 +50,8 @@ public:
 
     void setLongitude(float LO[3]);
     float getLongitude();
-
+    
+    friend ostream& operator<<(ostream& out, Veiculos* veiculo);
     //bool operator==(const Veiculos& outro);
 };
 

@@ -4,7 +4,7 @@ REM gera executavel
 SET EXECUTAVEL=main.exe
 
 REM compila
-g++ -o %EXECUTAVEL% -s main.cpp Includes/Veiculos.cpp Includes/Clientes.cpp Includes/Pedidos.cpp Includes/Carro.cpp Includes/Caminhonete.cpp Includes/Caminhao.cpp Includes/GerenciaVeiculos.cpp Includes/EscolheVeiculo.cpp Includes/Atendimento.cpp
+g++ -o %EXECUTAVEL% -s main.cpp Includes/Veiculos/Veiculos.cpp Includes/Clientes/Clientes.cpp Includes/Pedidos/Pedidos.cpp Includes/Carro/Carro.cpp Includes/Caminhonete/Caminhonete.cpp Includes/Caminhao/Caminhao.cpp Includes/GerenciaVeiculos/GerenciaVeiculos.cpp Includes/EscolheVeicul/EscolheVeiculo.cpp Includes/Atendimento/Atendimento.cpp
 
 REM verifica sucesso
 IF %ERRORLEVEL% EQU 0 (

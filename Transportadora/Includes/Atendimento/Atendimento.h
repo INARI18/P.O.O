@@ -4,9 +4,9 @@
 #include <iostream>
 #include <string>
 #include <cmath>
-#include "Veiculos.h"
-#include "GerenciaVeiculos.h"
-#include "Pedidos.h"
+#include "Veiculos/Veiculos.h"
+#include "GerenciaVeiculos/GerenciaVeiculos.h"
+#include "Pedidos/Pedidos.h"
 
 using namespace std;
 

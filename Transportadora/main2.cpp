@@ -139,7 +139,7 @@ int main(void) {
         cin >> resposta4;
 
         if(resposta4 == "SIM") {
-            novo->CalculaMenorDistancia(gerenciador, P1);
+            novo->MenorDistancia(gerenciador, P1);
         }
 
         delete P1;

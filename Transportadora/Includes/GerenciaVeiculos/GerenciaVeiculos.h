@@ -5,9 +5,9 @@
 #include <string>
 #include <list>
 #include "Veiculos.h"
-#include "Carro.h"
-#include "Caminhonete.h"
-#include "Caminhao.h"
+#include "Carro/Carro.h"
+#include "Caminhonete/Caminhonete.h"
+#include "Caminhao/Caminhao.h"
 
 using namespace std;
 
@@ -21,16 +21,10 @@ public:
     ~GerenciaVeiculos();
 
     list<Veiculos*> getVeiculos(); // retorna a lista de veiculos
-
-    void adicionaVeiculo(Carro *carro);
-    void adicionaVeiculo(Caminhonete *caminhonete);
-    void adicionaVeiculo(Caminhao *caminhao);
-    
+    void adicionaVeiculo(Veiculos *veiculo);
     void removeVeiculo(Veiculos *veiculo);
-    
     Veiculos *buscaChassi(string chassi);
     list<Veiculos*> buscaLocalizacao(string localizacao);
-    
     //list<Veiculos*> veiculosDisponiveis();
     void imprimeListaVeiculos();
 };
