@@ -64,11 +64,9 @@ void Garagem::imprimeListaVeiculos() {
     if (!ListaVeiculos.empty()) { 
         cout << "Lista de Veiculos Completa:" << endl;
         for (auto& veiculo : ListaVeiculos) {
-    cout << "- Modelo: " << veiculo->getModelo() << endl
-         << "- Chassi: " << veiculo->getChassi() << endl;
-}
+            cout << "- Modelo: " << veiculo->getModelo() << endl
+            << "- Chassi: " << veiculo->getChassi() << endl;
+        }
 
-    } else {
-        cout << "Lista de Veiculos Vazia!" << endl;
-    }
+    } else cout << "Lista de Veiculos Vazia!" << endl;
 }
