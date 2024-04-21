@@ -40,7 +40,7 @@ int main(void) {
         cin >> classe;
         
         TipoVeiculo tipo = EscolheVeiculo(classe);
-        Garagem *gerenciador = new Garagem;
+        Garagem *gerenciadorVeiculos = new Garagem;
         Veiculos *V1 = new Veiculos;
         Atendimento *novoAtendimento = new Atendimento;
         Pedidos *P1 = new Pedidos("Teclado", "Sao Paulo, SP", "Alegrete, RS", 0.556, LAp, LOp);
@@ -48,19 +48,19 @@ int main(void) {
         switch (tipo) {
             case TipoVeiculo::Carro: {
                 V1 = new Carro(380, 2023, "1G1FP23E4NL100000", "Volkswagen Golf", "Garagem", 4, "Automatico", LAv, LOv);
-                gerenciador->adicionaVeiculo(V1);
+                gerenciadorVeiculos->adicionaVeiculo(V1);
                 cout << "" << V1 << endl; 
                 break;
             }
             case TipoVeiculo::Caminhao: {
                 V1 = new Caminhao(16000, 2022, "9BD111060T5002156", "Bitruck", "Garagem", 2.60, 2.44, 8.00, LAv2, LOv2);
-                gerenciador->adicionaVeiculo(V1);
+                gerenciadorVeiculos->adicionaVeiculo(V1);
                 cout << "" << V1 << endl; 
                 break;
             }
             case TipoVeiculo::Caminhonete: {
                 V1 = new Caminhonete(1350, 2018, "4BCJK26K67E881953", "AlgumTipo", "Garagem", "Fechada", LAv3, LOv3);
-                gerenciador->adicionaVeiculo(V1);
+                gerenciadorVeiculos->adicionaVeiculo(V1);
                 cout << "" << V1 << endl; 
                 break;
             }
@@ -75,7 +75,7 @@ int main(void) {
         if(resposta2 == "SIM") {
             cout << "\nDigite o CHASSI do veiculo a ser removido: ";
             cin >> n_chassi; 
-            gerenciador->removeVeiculo(gerenciador->buscaChassi(n_chassi));
+            gerenciadorVeiculos->removeVeiculo(gerenciadorVeiculos->buscaChassi(n_chassi));
         }
 
         cout << "Deseja adicionar mais um Veiculo? (Digite SIM ou NAO): ";
@@ -93,19 +93,19 @@ int main(void) {
             switch (tipo) {
                 case TipoVeiculo::Carro: {
                     V2 = new Carro(432, 2024, "JN1ABCDEFGH123456", "Nissan Kicks", "Garagem", 4, "automatico", LAv3, LOv3);
-                    gerenciador->adicionaVeiculo(V2);
+                    gerenciadorVeiculos->adicionaVeiculo(V2);
                     cout << "" << V2 << endl; 
                     break;
                 }
                 case TipoVeiculo::Caminhao: {
                     V2 = new Caminhao(27000, 2015, "ZG1LM23N4OP105780", "Carreta", "Garagem", 2.85, 2.44, 14.8, LAv, LOv);
-                    gerenciador->adicionaVeiculo(V2);
+                    gerenciadorVeiculos->adicionaVeiculo(V2);
                     cout << "" << V2 << endl; 
                     break;
                 }
                 case TipoVeiculo::Caminhonete: {
                     V2 = new Caminhonete(1200, 2004, "1GCHK24U64E121748", "Ford F-150", "Garagem", "Aberta", LAv2, LOv2);
-                    gerenciador->adicionaVeiculo(V2);
+                    gerenciadorVeiculos->adicionaVeiculo(V2);
                     cout << "" << V2 << endl; 
                     break;
                 }
@@ -119,12 +119,12 @@ int main(void) {
         cin >> resposta4;
 
         if(resposta4 == "SIM") {
-            gerenciador->imprimeListaVeiculos();
+            gerenciadorVeiculos->imprimeListaVeiculos();
         }
         
-        novoAtendimento->MenorDistancia(gerenciador, P1);
+        novoAtendimento->MenorDistancia(gerenciadorVeiculos, P1);
 
-        delete gerenciador;
+        delete gerenciadorVeiculos;
         delete P1;
         delete V1;
     }
