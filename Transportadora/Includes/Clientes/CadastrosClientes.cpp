@@ -39,7 +39,7 @@ Clientes *CadastrosClientes::buscaNomeCliente(string nome_cliente) {
 void CadastrosClientes::ImprimeListaClientes() {
     if(!ListaClientes.empty()) {
         for(auto cliente : ListaClientes) {
-            cout << "Nome: " << cliente->getNome() << endl;
+            cout << "" << cliente << endl;
         }
     } else cout << "Lista de Clientes Vazia!" << endl;
 }
