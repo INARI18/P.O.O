@@ -41,6 +41,8 @@ public:
 
     void setLongitude(float LO[3]);
     float getLongitude();
+
+    friend ostream& operator<<(ostream& out, Pedidos* pedido);
 };
 
 #endif

@@ -114,3 +114,13 @@ void Pedidos::setLongitude(float LO[3]) {
 float Pedidos::getLongitude() {
     return this->longitude;
 }
+
+ostream& operator<<(ostream& out, Pedidos* pedido) {
+    out << "Capacidade: " << pedido->getNomePedido() << 
+    "\nModelo: " << pedido->getColeta() << 
+    "\nAno: " << pedido->getEntrega() << 
+    "\nChassi: " << pedido->getPeso() << 
+    "\nLocalizacao: " << pedido->getLatitude() <<
+    "\nLatitude: " << pedido->getLongitude(); 
+    return out;
+}
