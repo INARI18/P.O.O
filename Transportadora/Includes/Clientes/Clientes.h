@@ -25,6 +25,8 @@ public:
 
     void setEndereco(string end);
     string getEndereco();
+
+    friend ostream& operator<<(ostream& out, Clientes* cliente);
 };
 
 #endif
