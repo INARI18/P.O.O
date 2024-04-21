@@ -31,7 +31,7 @@ int Clientes::setNome(string nome_cliente) {
 }
 
 string Clientes::getNome() {
-    if(this->nome.empty()) { // verifica se a string está vazia
+    if(this->nome.empty()) {
         return "";
     }
     return this->nome; 
@@ -54,4 +54,11 @@ void Clientes::setEndereco(string end) {
 
 string Clientes::getEndereco() {
     return this->endereco;
+}
+
+ostream& operator<<(ostream& out, Clientes* cliente) {
+    out << "\nNome: " << cliente->getNome() << 
+    "\nEndereco: " << cliente->getEndereco() << 
+    "\nIdade: " << cliente->getIdade(); 
+    return out;
 }
