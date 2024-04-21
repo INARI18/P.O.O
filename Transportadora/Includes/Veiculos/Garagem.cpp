@@ -18,13 +18,13 @@ list<Veiculos*> Garagem::getListaVeiculos()  {
 
 void Garagem::adicionaVeiculo(Veiculos* veiculo) {
     ListaVeiculos.push_back(veiculo); 
-    cout << "Veiculo adicionado: \n" << veiculo->getModelo() << endl;
+    cout << "Veiculo adicionado com sucesso!" << endl;
 }
 
 void Garagem::removeVeiculo(Veiculos *veiculo){
     ListaVeiculos.remove(veiculo); 
     delete veiculo;
-    cout << "Veiculo removido: " << veiculo->getModelo() << endl;
+    cout << "Veiculo removido com sucesso!"<< endl;
 }
 
 Veiculos* Garagem::buscaChassi(string chassi) {
@@ -37,7 +37,7 @@ Veiculos* Garagem::buscaChassi(string chassi) {
             return veiculo;
         }
     }
-    throw runtime_error("chassi nao encontrado");
+    throw runtime_error("Veiculo nao encontrado");
 }
 
 list<Veiculos*> Garagem::buscaLocalizacao(string localizacao) {
@@ -66,10 +66,9 @@ void Garagem::imprimeListaVeiculos() {
         for (auto& veiculo : ListaVeiculos) {
     cout << "- Modelo: " << veiculo->getModelo() << endl
          << "- Chassi: " << veiculo->getChassi() << endl;
-    cout << endl;
 }
 
     } else {
-        cout << "Lista Vazia!" << endl;
+        cout << "Lista de Veiculos Vazia!" << endl;
     }
 }
