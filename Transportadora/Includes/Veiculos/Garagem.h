@@ -1,5 +1,5 @@
-#ifndef GERENCIA_VEICULOS_H
-#define GERENCIA_VEICULOS_H
+#ifndef GARAGEM_H
+#define GARAGEM_H
 
 #include <iostream>
 #include <string>
@@ -11,16 +11,15 @@
 
 using namespace std;
 
-class GerenciaVeiculos {
+class Garagem {
 private:
-    // armazena ponteiros
-    list<Veiculos*> veiculos;
+    list<Veiculos*> ListaVeiculos;
 
 public:
-    GerenciaVeiculos();
-    ~GerenciaVeiculos();
+    Garagem();
+    ~Garagem();
 
-    list<Veiculos*> getVeiculos(); // retorna a lista de veiculos
+    list<Veiculos*> getListaVeiculos();
     void adicionaVeiculo(Veiculos *veiculo);
     void removeVeiculo(Veiculos *veiculo);
     Veiculos *buscaChassi(string chassi);
