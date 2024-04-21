@@ -5,7 +5,7 @@
 #include <string>
 #include <cmath>
 #include "Veiculos/Veiculos.h"
-#include "GerenciaVeiculos/GerenciaVeiculos.h"
+#include "Veiculos/Garagem.h"
 #include "Pedidos/Pedidos.h"
 
 using namespace std;
@@ -17,12 +17,12 @@ public:
     Atendimento();
     ~Atendimento();
 
-    float CalculaDistancia(Carro *carro, Pedidos *pedido);
+    /*float CalculaDistancia(Carro *carro, Pedidos *pedido);
     float CalculaDistancia(Caminhao *caminhao, Pedidos *pedido);
-    float CalculaDistancia(Caminhonete *caminhonete, Pedidos *pedido);
+    float CalculaDistancia(Caminhonete *caminhonete, Pedidos *pedido);*/
     float CalculaDistancia(Veiculos *veiculo, Pedidos *pedido);
 
-    Veiculos *MenorDistancia(GerenciaVeiculos *objeto2, Pedidos *pedido);
+    Veiculos *MenorDistancia(Garagem *gerenciador, Pedidos *pedido);
 };
 
 #endif

@@ -8,8 +8,8 @@
 #include "Includes/Carro/Carro.h"
 #include "Includes/Caminhonete/Caminhonete.h"
 #include "Includes/Caminhao/Caminhao.h"
-#include "Includes/EscolheVeiculo/EscolheVeiculo.h"
-#include "Includes/GerenciaVeiculos/GerenciaVeiculos.h"
+#include "Includes/Veiculos/EscolheVeiculo.h"
+#include "Includes/Veiculos/Garagem.h"
 #include "Includes/Atendimento/Atendimento.h"
 
 using namespace std;
@@ -40,7 +40,7 @@ int main(void) {
         cin >> classe;
         
         TipoVeiculo tipo = EscolheVeiculo(classe);
-        GerenciaVeiculos *gerenciador = new GerenciaVeiculos;
+        Garagem *gerenciador = new Garagem;
         Veiculos *V1 = new Veiculos;
         Atendimento *novoAtendimento = new Atendimento;
         Pedidos *P1 = new Pedidos("Teclado", "Sao Paulo, SP", "Alegrete, RS", 0.556, LAp, LOp);

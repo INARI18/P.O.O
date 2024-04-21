@@ -7,10 +7,9 @@ using namespace std;
 
 Atendimento::Atendimento() {
 }
-
 Atendimento::~Atendimento(){}
 
-float Atendimento::CalculaDistancia(Carro *carro, Pedidos *pedido) {
+/*float Atendimento::CalculaDistancia(Carro *carro, Pedidos *pedido) {
     float diferencaDLA = carro->getLatitude() - pedido->getLatitude();
     float diferencaDLO = carro->getLongitude() - pedido->getLongitude();
     
@@ -38,7 +37,7 @@ float Atendimento::CalculaDistancia(Caminhonete *caminhonete, Pedidos *pedido) {
     float distancia = sqrt(comprimento);
 
     return distancia; 
-}
+}*/
 
 float Atendimento::CalculaDistancia(Veiculos *veiculo, Pedidos *pedido) {
     float diferencaDLA = veiculo->getLatitude() - pedido->getLatitude();
@@ -51,11 +50,11 @@ float Atendimento::CalculaDistancia(Veiculos *veiculo, Pedidos *pedido) {
 }
 
 
-Veiculos* Atendimento::MenorDistancia(GerenciaVeiculos *objeto2, Pedidos *pedido) {
+Veiculos* Atendimento::MenorDistancia(Garagem *gerenciador, Pedidos *pedido) {
     float menorD = 4400.0;
     Veiculos* veiculoMaisProximo = nullptr;
 
-    for(auto &v : objeto2->getVeiculos()) { 
+    for(auto &v : gerenciador->getListaVeiculos()) { 
         float distancia = CalculaDistancia(v, pedido);
         if(distancia < menorD) {
             menorD = distancia;
@@ -63,7 +62,7 @@ Veiculos* Atendimento::MenorDistancia(GerenciaVeiculos *objeto2, Pedidos *pedido
         }
     }
 
-    if (veiculoMaisProximo != nullptr) { // Verifica se um veículo foi encontrado
+    if (veiculoMaisProximo != nullptr) {
         cout << "Veiculo mais proximo: " << veiculoMaisProximo->getModelo()
         << "\nDistancia: " << CalculaDistancia(veiculoMaisProximo, pedido) << endl;
         return veiculoMaisProximo;
