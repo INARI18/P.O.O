@@ -8,7 +8,7 @@ using namespace std;
 
 class Pedidos {
 private:
-static int numeroPedido;
+    static int numeroPedido;
     int numero;
     string nomePedido;
     string coleta;

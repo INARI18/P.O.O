@@ -1,7 +1,6 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
-#include <cmath>
 #include "Veiculos.h"
 
 using namespace std;
@@ -12,7 +11,6 @@ Veiculos::Veiculos() {
     this->chassi = "";
     this->modelo = "";
     this->localizacao = "";
-    this->disponibilidade = 1;
     this->itens = 0;
     this->latitude = 0.0;
     this->longitude = 0.0;
@@ -23,8 +21,8 @@ Veiculos::Veiculos(int cap, int ano, string Vchassi, string modelo, string local
     setAno(ano);
     setChassi(Vchassi);
     setModelo(modelo);
+    setDisponibilidade(1);
     setLocalizacao(localizacao); 
-    //setDisponibilidade();
     setLatitude(LA);
     setLongitude(LO);
 }
@@ -79,19 +77,19 @@ string Veiculos::getLocalizacao(){
     return this->localizacao;
 }
 
-/*int Veiculos::setDisponibilidade() {
-    if(){
-        this->disponibilidade = 1;
-        return 1;
-    }
+void Veiculos::setDisponibilidade(int d) {
+    this->disponibilidade = d;
+}
 
-    this->disponibilidade = 0;
-    return 0;
+void Veiculos::VeiculoIndisponivel() {
+    if(getItens() == 0) {
+        this->disponibilidade = 0;
+    }
 }
 
 int Veiculos::getDisponibilidade(){
     return this->disponibilidade;
-}*/
+}
 
 void Veiculos::setItens(int value) {
     itens = value;
@@ -106,24 +104,10 @@ void Veiculos::decrementarItens() {
 }
 
 void Veiculos::setLatitude(float LA[3]) {
-    float x, y, z, total1;
-    for(int i = 0; i < 3; i++) {
-        if(i == 0) {
-            x = LA[i]*60;
-        }
-
-        if(i == 1) {
-            y = LA[i]; // * 1
-        }
-
-        if(i == 2) {
-            z = LA[i]/60;
-        }
-
-        total1 = (x + y + z)*111.32;
-    }
-
-    this->latitude = total1;
+    // converte graus, minutos e segundos para graus decimais
+    float total = LA[0] + LA[1]/60 + LA[2]/3600;
+    //graus decimais para km
+    this->latitude = total * 111.32;
 }
 
 float Veiculos::getLatitude() {
@@ -131,24 +115,8 @@ float Veiculos::getLatitude() {
 }
 
 void Veiculos::setLongitude(float LO[3]) {
-    float x, y, z, total2;
-    for(int i = 0; i < 3; i++) {
-        if(i == 0) {
-            x = LO[i]*60;
-        }
-
-        if(i == 1) {
-            y = LO[i]; // * 1
-        }
-
-        if(i == 2) {
-            z = LO[i]/60;
-        }
-
-        total2 = (x + y + z)*111.32; //  convertendo nm para km
-    }
-
-    this->longitude = total2;
+    float total = LO[0] + LO[1]/60 + LO[2]/3600;
+    this->latitude = total * 111.32;
 }
 
 float Veiculos::getLongitude() {

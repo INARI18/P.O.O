@@ -63,24 +63,8 @@ float Pedidos::getPeso() {
 }
 
 void Pedidos::setLatitude(float LA[3]) {
-    float x, y, z, total1;
-    for(int i = 0; i < 3; i++) {
-        if(i == 0) {
-            x = LA[i]*60;
-        }
-
-        if(i == 1) {
-            y = LA[i]; // * 1
-        }
-
-        if(i == 2) {
-            z = LA[i]/60;
-        }
-
-        total1 = (x + y + z)*111.32;
-    }
-
-    this->latitude = total1;
+    float total = LA[0] + LA[1]/60 + LA[2]/3600;
+    this->latitude = total * 111.32;
 }
 
 float Pedidos::getLatitude() {
@@ -88,24 +72,8 @@ float Pedidos::getLatitude() {
 }
 
 void Pedidos::setLongitude(float LO[3]) {
-    float x, y, z, total2;
-    for(int i = 0; i < 3; i++) {
-        if(i == 0) {
-            x = LO[i]*60;
-        }
-
-        if(i == 1) {
-            y = LO[i]; // * 1
-        }
-
-        if(i == 2) {
-            z = LO[i]/60;
-        }
-
-        total2 = (x + y + z)*111.32;
-    }
-
-    this->longitude = total2;
+    float total = LO[0] + LO[1]/60 + LO[2]/3600;
+    this->latitude = total * 111.32;
 }
 
 float Pedidos::getLongitude() {
