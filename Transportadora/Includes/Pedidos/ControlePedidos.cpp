@@ -18,19 +18,22 @@ void ControlePedidos::removePedido(Pedidos *pedido) {
 }
 
 Pedidos *ControlePedidos::buscaPedido(int codigo) {
-    if(isdigit(codigo)) {
-        for(auto &pedido : ListaPedidos) {
-            if(pedido->getNumeroPedido() == codigo) {
-                return pedido;
-            }
-            throw runtime_error("Pedido nao encontrado");
+    for(auto &pedido : ListaPedidos) {
+        if(pedido->getNumero() == codigo) {
+            return pedido;
         }
     }
-    throw runtime_error("Codigo de Pedido invalido");
+    cout << "Pedido nao encontrado" << endl;
 }
 
 void ControlePedidos::ImprimeListaPedidos(){
-    for(auto &pedido : ListaPedidos) {
-        cout << "" << pedido << endl;
+    if (ListaPedidos.empty()) {
+        cout << "Lista de Pedidos Vazia!" << endl;
+    } 
+    
+    else {
+        for(auto &pedido : ListaPedidos) {
+            cout << "" << pedido << endl;
+        }
     }
 }

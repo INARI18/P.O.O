@@ -8,7 +8,8 @@ using namespace std;
 
 class Pedidos {
 private:
-    static int numeroPedido; // membro estático
+static int numeroPedido;
+    int numero;
     string nomePedido;
     string coleta;
     string entrega;
@@ -21,8 +22,7 @@ public:
     Pedidos(string produto, string local_coleta, string local_entrega, float peso_carga, float LA[3], float LO[3]);
     ~Pedidos();
     
-    static void setNumeroPedido();
-    static int getNumeroPedido();
+    int getNumero();
 
     void setNomePedido(string produto);
     string getNomePedido();

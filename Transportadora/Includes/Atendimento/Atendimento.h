@@ -7,7 +7,7 @@
 
 #include "../Veiculos/Veiculos.h"
 #include "../Veiculos/Garagem.h"
-#include "../Pedidos/Pedidos.h"
+#include "../Pedidos/ControlePedidos.h"
 
 using namespace std;
 
@@ -18,11 +18,8 @@ public:
     Atendimento();
     ~Atendimento();
 
-    /*float CalculaDistancia(Carro *carro, Pedidos *pedido);
-    float CalculaDistancia(Caminhao *caminhao, Pedidos *pedido);
-    float CalculaDistancia(Caminhonete *caminhonete, Pedidos *pedido);*/
     float CalculaDistancia(Veiculos *veiculo, Pedidos *pedido);
-    Veiculos *MenorDistancia(Garagem *gerenciador, Pedidos *pedido);
+    void MenorDistancia(Garagem *gerenciadorVeiculos, ControlePedidos *gerenciadorPedidos);
 };
 
 #endif

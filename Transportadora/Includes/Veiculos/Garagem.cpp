@@ -10,6 +10,7 @@ Garagem::~Garagem() {
     for (auto veiculo : ListaVeiculos) {
         delete veiculo; 
     }
+    ListaVeiculos.clear();
 }
 
 list<Veiculos*> Garagem::getListaVeiculos()  {

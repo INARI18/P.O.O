@@ -11,26 +11,23 @@ Pedidos::Pedidos() {
     this->coleta = "";
     this->entrega = "";
     this->peso = 0.0;
+    this->numero = 0;
 }
 
 Pedidos::Pedidos(string produto, string local_coleta, string local_entrega, float peso_carga, float LA[3], float LO[3]) {
-    setNumeroPedido();
     setNomePedido(produto);
     setColeta(local_coleta);
     setEntrega(local_entrega);
     setPeso(peso_carga);
     setLatitude(LA);
     setLongitude(LO);
+    numero = ++numeroPedido;
 }
 
 Pedidos::~Pedidos(){}
 
-void Pedidos::setNumeroPedido() {
-    numeroPedido++;
-}
-
-int Pedidos::getNumeroPedido() {
-    return numeroPedido;
+int Pedidos::getNumero() {
+    return this->numero;
 }
 
 void Pedidos::setNomePedido(string produto) {
@@ -116,11 +113,11 @@ float Pedidos::getLongitude() {
 }
 
 ostream& operator<<(ostream& out, Pedidos* pedido) {
-    out << "Capacidade: " << pedido->getNomePedido() << 
-    "\nModelo: " << pedido->getColeta() << 
-    "\nAno: " << pedido->getEntrega() << 
-    "\nChassi: " << pedido->getPeso() << 
-    "\nLocalizacao: " << pedido->getLatitude() <<
-    "\nLatitude: " << pedido->getLongitude(); 
+    out << "Nome Pedido: " << pedido->getNomePedido() << 
+    "\nLocal de Coleta: " << pedido->getColeta() << 
+    "\nLocal de Entrega: " << pedido->getEntrega() << 
+    "\nPeso: " << pedido->getPeso() << 
+    "\nLatitude: " << pedido->getLatitude() <<
+    "\nLongitude: " << pedido->getLongitude(); 
     return out;
 }
