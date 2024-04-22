@@ -14,6 +14,7 @@ Veiculos::Veiculos() {
     this->itens = 0;
     this->latitude = 0.0;
     this->longitude = 0.0;
+    this->disponibilidade = 1;
 }
 
 Veiculos::Veiculos(int cap, int ano, string Vchassi, string modelo, string localizacao, float LA[3], float LO[3]){
@@ -77,26 +78,24 @@ string Veiculos::getLocalizacao(){
     return this->localizacao;
 }
 
-void Veiculos::setDisponibilidade(int d) {
-    this->disponibilidade = d;
-}
-
-void Veiculos::VeiculoIndisponivel() {
-    if(getItens() == 0) {
-        this->disponibilidade = 0;
-    }
-}
-
-int Veiculos::getDisponibilidade(){
-    return this->disponibilidade;
-}
-
 void Veiculos::setItens(int value) {
     itens = value;
 }
 
 int Veiculos::getItens(){
     return itens;
+}
+
+void Veiculos::setDisponibilidade(int d) {
+    if(getItens() == 0) {
+        this->disponibilidade = 0;
+    }
+
+    else this->disponibilidade = d;
+}
+
+int Veiculos::getDisponibilidade(){
+    return this->disponibilidade;
 }
     
 void Veiculos::decrementarItens() {

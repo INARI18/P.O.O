@@ -53,7 +53,7 @@ void Atendimento::MenorDistancia(Garagem *listaVeiculos, ControlePedidos *listaP
         Veiculos *veiculoMaisProximo = nullptr;
 
         for(Veiculos *veiculo : listaVeiculos->getListaVeiculos()) {
-            if(veiculo->getDisponibilidade() == 1 && veiculo->getItens() != 0) {
+            if(veiculo->getDisponibilidade() == 1) {
                 float distancia = CalculaDistancia(veiculo, pedido);
                 if(distancia < menorDistancia) {
                     menorDistancia = distancia;

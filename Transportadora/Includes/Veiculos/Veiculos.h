@@ -39,7 +39,6 @@ public:
     string getLocalizacao();
 
     void setDisponibilidade(int d);
-    void VeiculoIndisponivel();
     int getDisponibilidade();
 
     void setItens(int value);
