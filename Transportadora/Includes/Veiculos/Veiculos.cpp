@@ -22,7 +22,7 @@ Veiculos::Veiculos(int cap, int ano, string Vchassi, string modelo, string local
     setAno(ano);
     setChassi(Vchassi);
     setModelo(modelo);
-    setDisponibilidade(1);
+    setDisponibilidade();
     setLocalizacao(localizacao); 
     setLatitude(LA);
     setLongitude(LO);
@@ -86,20 +86,21 @@ int Veiculos::getItens(){
     return itens;
 }
 
-void Veiculos::setDisponibilidade(int d) {
-    if(getItens() == 0) {
+void Veiculos::setDisponibilidade() {
+    if(itens == 0) {
         this->disponibilidade = 0;
     }
 
-    else this->disponibilidade = d;
+    else this->disponibilidade = 1;
 }
 
 int Veiculos::getDisponibilidade(){
-    return this->disponibilidade;
+    return disponibilidade;
 }
     
 void Veiculos::decrementarItens() {
     itens--;
+    setDisponibilidade();
 }
 
 void Veiculos::setLatitude(float LA[3]) {
