@@ -73,7 +73,7 @@ float Pedidos::getLatitude() {
 
 void Pedidos::setLongitude(float LO[3]) {
     float total = LO[0] + LO[1]/60 + LO[2]/3600;
-    this->latitude = total * 111.32;
+    this->longitude = total * 111.32;
 }
 
 float Pedidos::getLongitude() {

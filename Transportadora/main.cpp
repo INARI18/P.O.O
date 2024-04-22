@@ -24,8 +24,8 @@ using namespace std;
 int main(void) {
     float LAp[3] = {-28, 15, 48};
     float LOp[3] = {-52, 52, 22};
-    float LAp2[3] = {22.0, 30.0, 44.04};
-    float LOp2[3] = {-50.0, -50.0, 30.2};
+    float LAp2[3] = {-23, 33, 1}; 
+    float LOp2[3] = {-46, -37, -59};
 
     float LAv[3] = {23.0, 30.0, 36.50};
     float LOv[3] = {46.0, 38.0, 32.90};
