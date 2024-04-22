@@ -1,11 +1,10 @@
 #include <iostream>
-#include<iomanip>
+#include <iomanip>
 #include <string>
 #include "Veiculos.h"
 
-using namespace std; // simplifica a sintaxe do código
+using namespace std;
 
-// Veiculos:: serve para indicar a classe a qual a funçao pertence
 Veiculos::Veiculos() {
     this->capacidade = 0.0;
     this->ano = 0;

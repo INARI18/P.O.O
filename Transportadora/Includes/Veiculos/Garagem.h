@@ -5,9 +5,9 @@
 #include <string>
 #include <list>
 #include "Veiculos.h"
-#include "Carro/Carro.h"
-#include "Caminhonete/Caminhonete.h"
-#include "Caminhao/Caminhao.h"
+#include "../Carro/Carro.h"
+#include "../Caminhonete/Caminhonete.h"
+#include "../Caminhao/Caminhao.h"
 
 using namespace std;
 

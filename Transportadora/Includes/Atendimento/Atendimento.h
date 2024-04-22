@@ -5,9 +5,9 @@
 #include <string>
 #include <cmath>
 
-#include "Veiculos/Veiculos.h"
-#include "Veiculos/Garagem.h"
-#include "Pedidos/Pedidos.h"
+#include "../Veiculos/Veiculos.h"
+#include "../Veiculos/Garagem.h"
+#include "../Pedidos/Pedidos.h"
 
 using namespace std;
 
