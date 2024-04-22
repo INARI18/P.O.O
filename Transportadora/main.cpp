@@ -24,13 +24,13 @@ using namespace std;
 int main(void) {
     float LAp[3] = {-28, 15, 48};
     float LOp[3] = {-52, 52, 22};
-    float LAp2[3] = {-23, 33, 1}; 
-    float LOp2[3] = {-46, 37, 59};
+    float LAp2[3] = {22.0, 30.0, 44.04};
+    float LOp2[3] = {-50.0, -50.0, 30.2};
 
     float LAv[3] = {23.0, 30.0, 36.50};
     float LOv[3] = {46.0, 38.0, 32.90};
-    float LAv5[3] = {-29.7753, -57.0884, 20.60};
-    float LOv5[3] = {-57.0884, -29.7753, 40.10};
+    float LAv5[3] = {-29.7753, -57.0884, 20};
+    float LOv5[3] = {-57.0884, -29.7753, 40};
     float LAv6[3] = {22.0, 30.0, 44.04};
     float LOv6[3] = {-50.0, -50.0, 30.2};
 
@@ -42,8 +42,20 @@ int main(void) {
     Pedidos *P1 = new Pedidos("Teclado", "Sao Paulo, SP", "Alegrete, RS", 0.556, LAp, LOp);
     Pedidos *P2 = new Pedidos("Mouse", "Rio de Janeiro, RJ", "Uruguaiana, RS", 0.790, LAp2, LOp2);
 
+    listaPedidos->adicionaPedido(P1);
+    listaPedidos->adicionaPedido(P2);
+    listaPedidos->ImprimeListaPedidos();
+
+    cout << "" << endl;
+
     Clientes *C1 = new Clientes("Batman", 78, "Gotham");
     Clientes *C2 = new Clientes("Robin", 15, "Gotham");
+
+    listaClientes->adicionaCliente(C1);
+    listaClientes->adicionaCliente(C2);
+    listaClientes->ImprimeListaClientes();
+
+    cout << "" << endl;
 
     Veiculos *V1;
     Veiculos *V2;
@@ -56,13 +68,6 @@ int main(void) {
     listaVeiculos->adicionaVeiculo(V1);
     listaVeiculos->adicionaVeiculo(V2);
     listaVeiculos->adicionaVeiculo(V3);
-
-    listaPedidos->adicionaPedido(P1);
-    listaPedidos->adicionaPedido(P2);
-
-    listaClientes->adicionaCliente(C1);
-    listaClientes->adicionaCliente(C2);
-    listaClientes->ImprimeListaClientes();
 
     novo->MenorDistancia(listaVeiculos, listaPedidos);
 
@@ -80,6 +85,7 @@ int main(void) {
     delete listaVeiculos;
     delete listaPedidos;
     delete listaClientes;
+
     return 0;
 }
 
