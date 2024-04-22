@@ -38,9 +38,9 @@ int main(void) {
     Veiculos *V2;
     Veiculos *V3;
 
-    V3 = new Caminhao(27000, 2015, "ZG1LM23N4OP105780", "Carreta", "Garagem", 2.85, 2.44, 14.8, LAv, LOv);
-    V2 = new Carro(380, 2023, "1G1FP23E4NL100000", "Volkswagen Golf", "Garagem", 4, "Automatico", LAv5, LOv5);
-    V1 = new Caminhonete(1200, 2004, "1GCHK24U64E121748", "Ford F-150", "Garagem", "Aberta", LAv6, LOv6);
+    V1 = new Caminhao(27000, 2015, "ZG1LM23N4OP105780", "Carreta", "Garagem", 2.85, 2.44, 14.8, LAv6, LOv6);
+    V3 = new Carro(380, 2023, "1G1FP23E4NL100000", "Volkswagen Golf", "Garagem", 4, "Automatico", LAv, LOv);
+    V2 = new Caminhonete(1200, 2004, "1GCHK24U64E121748", "Ford F-150", "Garagem", "Aberta", LAv5, LOv5);
 
     gerenciadorVeiculos->adicionaVeiculo(V1);
     gerenciadorVeiculos->adicionaVeiculo(V2);
