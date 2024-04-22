@@ -11,6 +11,8 @@
 #include "Includes/Veiculos/EscolheVeiculo.h"
 #include "Includes/Veiculos/Garagem.h"
 #include "Includes/Atendimento/Atendimento.h"
+#include "Includes/Clientes/CadastrosClientes.h"
+#include "Includes/Pedidos/ControlePedidos.h"
 
 using namespace std;
 
