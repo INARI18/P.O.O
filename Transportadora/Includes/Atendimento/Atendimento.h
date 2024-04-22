@@ -21,7 +21,6 @@ public:
     float CalculaDistancia(Caminhao *caminhao, Pedidos *pedido);
     float CalculaDistancia(Caminhonete *caminhonete, Pedidos *pedido);*/
     float CalculaDistancia(Veiculos *veiculo, Pedidos *pedido);
-
     Veiculos *MenorDistancia(Garagem *gerenciador, Pedidos *pedido);
 };
 
