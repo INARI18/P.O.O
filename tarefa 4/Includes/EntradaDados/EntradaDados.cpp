@@ -20,36 +20,29 @@ void EntradaDados::instancia (CadastrosClientes* listaClientes, ControlePedidos*
 
             getline (file, s, ',');
                 cliente->setNome(s);
-//                cout << s << "\n";
 
             getline (file, s, ',');
                 cliente->setCPF(s);
-//                cout << s << "\n";
 
             getline (file, s, '"');
             getline (file, s, '"');
                 cliente->setEndereco(s);
-//                cout << s << "\n";
             getline (file, s, ',');
 
             getline (file, s, ',');
                 cliente->setTelefone(s);
- //               cout << s << "\n";
 
             getline (file, s, ',');
                 cliente->setEmail(s);
- //               cout << s << "\n";
 
             getline (file, s, '"');
             getline (file, s, '"');
                 pedido->setColeta(s);
-//                cout << s << "\n";
             getline (file, s, ',');
 
             getline (file, s, '"');
             getline (file, s, '"');
                 pedido->setEntrega(s);
-//                cout << s << "\n";
             getline (file, s, ',');
 
             getline (file, s, ',');
@@ -64,11 +57,12 @@ void EntradaDados::instancia (CadastrosClientes* listaClientes, ControlePedidos*
                 pedido->setVolume(stof(s));
         } catch (exception& erro) {
             cout << "ERRO! " << s << "\n"; //  printar string se der qualquer erro
-       }
+        }
 
             getline (file, s, '\n');
                 pedido->setPrioridade(s);
-//                cout << s << "\n";
+
+        pedido->setCliente (cliente);   //  define o cliente para o pedido
 
         listaClientes -> adicionaCliente(cliente);
         listaPedidos -> adicionaPedido (pedido);

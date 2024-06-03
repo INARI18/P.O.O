@@ -23,7 +23,7 @@ private:
 
 public:
     Pedidos();
-    Pedidos(string produto, string local_coleta, string local_entrega, float peso_carga, float LA[3], float LO[3]);
+    Pedidos(string produto, string local_coleta, string local_entrega, float peso_carga, float latitude, float longitude);
     ~Pedidos();
     
     int getNumero();
@@ -43,10 +43,10 @@ public:
     void setVolume(float volume);
     float getVolume();
 
-    void setLatitude(float LA[3]);
+    void setLatitude(float latitude);
     float getLatitude();
 
-    void setLongitude(float LO[3]);
+    void setLongitude(float longitude);
     float getLongitude();
 
     void setPrioridade(string prioridade);

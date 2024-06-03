@@ -13,13 +13,13 @@ Pedidos::Pedidos() {
     this->cliente = nullptr;
 }
 
-Pedidos::Pedidos(string produto, string local_coleta, string local_entrega, float peso_carga, float LA[3], float LO[3]) {
+Pedidos::Pedidos(string produto, string local_coleta, string local_entrega, float peso_carga, float latitude, float longitude) {
     setNomePedido(produto);
     setColeta(local_coleta);
     setEntrega(local_entrega);
     setPeso(peso_carga);
-    setLatitude(LA);
-    setLongitude(LO);
+    setLatitude(latitude);
+    setLongitude(longitude);
     numero = ++numeroPedido;
 }
 
@@ -69,18 +69,16 @@ float Pedidos::getVolume() {
     return this->volume;
 }
 
-void Pedidos::setLatitude(float LA[3]) {
-    float total = LA[0] + LA[1]/60 + LA[2]/3600;
-    this->latitude = total * 111.32;
+void Pedidos::setLatitude(float latitude) {
+    this->latitude = latitude;
 }
 
 float Pedidos::getLatitude() {
     return this->latitude;
 }
 
-void Pedidos::setLongitude(float LO[3]) {
-    float total = LO[0] + LO[1]/60 + LO[2]/3600;
-    this->longitude = total * 111.32;
+void Pedidos::setLongitude(float longitude) {
+    this->longitude = longitude;
 }
 
 float Pedidos::getLongitude() {
